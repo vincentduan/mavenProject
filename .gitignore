@@ -1,3 +1,6 @@
-vincent-job/target/
 mavenTest/target/
-Vincent-common/target/
+mavenTest/.idea/
+vincent-job/target/
+vincent-job/vincent-job.iml
+vincent-common/target/
+vincent-common/vincent-common.iml
