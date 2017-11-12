@@ -4,3 +4,5 @@ vincent-job/target/
 vincent-job/vincent-job.iml
 vincent-common/target/
 vincent-common/vincent-common.iml
+vincent-kafka/target/
+vincent-kafka/vincent-kafka.iml
