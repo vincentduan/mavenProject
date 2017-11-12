@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../file2DB-service/file2DB-service.iml" filepath="$PROJECT_DIR$/../file2DB-service/file2DB-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/taianFile2DB.iml" filepath="$PROJECT_DIR$/taianFile2DB.iml" />
+    </modules>
+  </component>
+</project>
