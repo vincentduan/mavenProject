@@ -217,3 +217,395 @@
 2017-11-12 22:48:34,101 - Successfully joined group 0 with generation 1
 2017-11-12 22:48:34,102 - Setting newly assigned partitions [test1-0] for group 0
 2017-11-12 22:48:34,102 - partitions assigned: [test1-0]
+2017-11-13 11:46:31,006 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3d04a311: startup date [Mon Nov 13 11:46:31 CST 2017]; root of context hierarchy
+2017-11-13 11:46:31,069 - Loading XML bean definitions from class path resource [spring/spring-consumer.xml]
+2017-11-13 11:46:31,316 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-13 11:46:31,473 - Kafka version : 0.11.0.0
+2017-11-13 11:46:31,473 - Kafka commitId : cb8625948210849f
+2017-11-13 11:46:31,488 - Starting beans in phase 0
+2017-11-13 11:46:31,504 - Starting beans in phase 0
+2017-11-13 11:46:45,820 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3d04a311: startup date [Mon Nov 13 11:46:45 CST 2017]; root of context hierarchy
+2017-11-13 11:46:45,867 - Loading XML bean definitions from class path resource [spring/spring-consumer.xml]
+2017-11-13 11:46:46,117 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-13 11:46:46,258 - Kafka version : 0.11.0.0
+2017-11-13 11:46:46,258 - Kafka commitId : cb8625948210849f
+2017-11-13 11:46:46,274 - Starting beans in phase 0
+2017-11-13 11:46:46,274 - Starting beans in phase 0
+2017-11-13 12:44:41,184 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3d04a311: startup date [Mon Nov 13 12:44:41 CST 2017]; root of context hierarchy
+2017-11-13 12:44:41,231 - Loading XML bean definitions from class path resource [spring/spring-consumer.xml]
+2017-11-13 12:44:41,481 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-13 12:44:41,637 - Kafka version : 0.11.0.0
+2017-11-13 12:44:41,637 - Kafka commitId : cb8625948210849f
+2017-11-13 12:44:41,653 - Starting beans in phase 0
+2017-11-13 12:44:41,653 - Starting beans in phase 0
+2017-11-13 13:04:14,742 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:15,822 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:16,889 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:17,968 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:19,037 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:20,109 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:21,160 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:22,247 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:23,323 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:24,396 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:25,467 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:26,552 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:27,641 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:28,719 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:29,788 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:30,861 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:31,951 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:33,014 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:34,090 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:35,158 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:36,232 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:37,304 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:38,368 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:39,449 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:40,515 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:41,594 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:42,664 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:43,750 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:44,819 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:45,894 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:46,970 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:48,031 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:49,100 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:50,221 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:51,349 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:52,421 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:53,489 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:54,565 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:55,631 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:56,706 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:57,856 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:58,934 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:04:59,990 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:05:01,060 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:05:02,147 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:05:03,234 - Connection to node 0 could not be established. Broker may not be available.
+2017-11-13 13:05:04,898 - Discovered coordinator 192.168.152.45:9092 (id: 2147483647 rack: null) for group 0.
+2017-11-13 13:05:04,914 - Revoking previously assigned partitions [] for group 0
+2017-11-13 13:05:04,914 - partitions revoked: []
+2017-11-13 13:05:04,914 - (Re-)joining group 0
+2017-11-13 13:05:05,003 - Successfully joined group 0 with generation 1
+2017-11-13 13:05:05,004 - Setting newly assigned partitions [] for group 0
+2017-11-13 13:05:05,004 - partitions assigned: []
+2017-11-13 13:06:18,526 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3d04a311: startup date [Mon Nov 13 13:06:18 CST 2017]; root of context hierarchy
+2017-11-13 13:06:18,589 - Loading XML bean definitions from class path resource [spring/spring-consumer.xml]
+2017-11-13 13:06:18,823 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-13 13:06:18,979 - Kafka version : 0.11.0.0
+2017-11-13 13:06:18,979 - Kafka commitId : cb8625948210849f
+2017-11-13 13:06:18,995 - Starting beans in phase 0
+2017-11-13 13:06:18,995 - Starting beans in phase 0
+2017-11-13 13:06:19,101 - Discovered coordinator 192.168.152.45:9092 (id: 2147483647 rack: null) for group 0.
+2017-11-13 13:06:19,119 - Revoking previously assigned partitions [] for group 0
+2017-11-13 13:06:19,119 - partitions revoked: []
+2017-11-13 13:06:19,119 - (Re-)joining group 0
+2017-11-13 13:06:19,138 - Successfully joined group 0 with generation 3
+2017-11-13 13:06:19,139 - Setting newly assigned partitions [test1-0] for group 0
+2017-11-13 13:06:19,139 - partitions assigned: [test1-0]
+2017-11-13 13:15:02,726 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3d04a311: startup date [Mon Nov 13 13:15:02 CST 2017]; root of context hierarchy
+2017-11-13 13:15:02,773 - Loading XML bean definitions from class path resource [spring/spring-consumer.xml]
+2017-11-13 13:15:03,046 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-13 13:15:03,180 - Kafka version : 0.11.0.0
+2017-11-13 13:15:03,181 - Kafka commitId : cb8625948210849f
+2017-11-13 13:15:03,190 - Starting beans in phase 0
+2017-11-13 13:15:03,194 - Starting beans in phase 0
+2017-11-13 13:15:03,289 - Discovered coordinator 192.168.152.45:9092 (id: 2147483647 rack: null) for group 0.
+2017-11-13 13:15:03,289 - Revoking previously assigned partitions [] for group 0
+2017-11-13 13:15:03,289 - partitions revoked: []
+2017-11-13 13:15:03,289 - (Re-)joining group 0
+2017-11-13 13:15:03,305 - Successfully joined group 0 with generation 5
+2017-11-13 13:15:03,305 - Setting newly assigned partitions [test1-0] for group 0
+2017-11-13 13:15:03,305 - partitions assigned: [test1-0]
