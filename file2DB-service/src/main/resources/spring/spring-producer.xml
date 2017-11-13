@@ -9,7 +9,7 @@
     <bean id="producerProperties" class="java.util.HashMap">
         <constructor-arg>
             <map>
-                <entry key="bootstrap.servers" value="172.16.247.100:9092" />
+                <entry key="bootstrap.servers" value="192.168.152.45:9092" />
                 <entry key="retries" value="10" />
                 <entry key="batch.size" value="16384" />
                 <entry key="linger.ms" value="1" />
