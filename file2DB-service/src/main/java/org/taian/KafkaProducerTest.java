@@ -15,6 +15,6 @@ public class KafkaProducerTest {
 
     @Test
     public void testTemplateSend() {
-        kafkaTemplate.send("test1", "www.bbbbb.com");
+        kafkaTemplate.send("test1", "www.c.com");
     }
 }

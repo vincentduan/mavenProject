@@ -38,7 +38,6 @@
         <property name="messageListener" ref="messageListernerConsumerService" />
     </bean>
 
-    <!-- 创建kafkatemplate bean，使用的时候，只需要注入这个bean，即可使用template的send消息方法 -->
     <bean id="messageListenerContainer" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
         <constructor-arg ref="consumerFactory" />
         <constructor-arg ref="containerProperties" />

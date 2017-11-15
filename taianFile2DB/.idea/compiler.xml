@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="file2DB-service" />
         <module name="file2DB-web" />
-        <module name="taianFile2DB" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">

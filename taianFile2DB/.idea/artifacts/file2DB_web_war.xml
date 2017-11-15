@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="file2DB-web:war">
+    <output-path>$PROJECT_DIR$/../file2DB-web/target</output-path>
+    <root id="archive" name="file2DB-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="file2DB-web:war exploded" />
+    </root>
+  </artifact>
+</component>
