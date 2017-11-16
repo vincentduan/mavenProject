@@ -11,7 +11,7 @@ file2DB-service/target/
 file2DB-service/logs/
 file2DB-service/.idea/
 file2DB-service/file2DB-service.iml
-taianFile2DB/.idea/
-taianFile2DB/logs/
+file2DB/.idea/
+file2DB/logs/
 file2DB-web/target/
 file2DB-web/file2DB-web.iml

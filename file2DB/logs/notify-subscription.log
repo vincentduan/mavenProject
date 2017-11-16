@@ -1,0 +1,84 @@
+2017-11-14 11:33:13,676 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2ff5659e: startup date [Tue Nov 14 11:33:13 CST 2017]; root of context hierarchy
+2017-11-14 11:33:13,792 - Loading XML bean definitions from class path resource [spring/spring-consumer.xml]
+2017-11-14 11:33:14,379 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-14 11:33:14,588 - Kafka version : 0.11.0.0
+2017-11-14 11:33:14,588 - Kafka commitId : cb8625948210849f
+2017-11-14 11:33:14,640 - Starting beans in phase 0
+2017-11-14 11:33:14,644 - Starting beans in phase 0
+2017-11-14 11:33:14,825 - Discovered coordinator 192.168.152.45:9092 (id: 2147483647 rack: null) for group 0.
+2017-11-14 11:33:14,837 - Revoking previously assigned partitions [] for group 0
+2017-11-14 11:33:14,838 - partitions revoked: []
+2017-11-14 11:33:14,838 - (Re-)joining group 0
+2017-11-14 11:33:14,883 - Successfully joined group 0 with generation 7
+2017-11-14 11:33:14,884 - Setting newly assigned partitions [test1-0] for group 0
+2017-11-14 11:33:14,885 - partitions assigned: [test1-0]
+2017-11-14 12:56:47,889 - Revoking previously assigned partitions [test1-0] for group 0
+2017-11-14 12:56:47,890 - partitions revoked: [test1-0]
+2017-11-14 12:56:47,891 - (Re-)joining group 0
+2017-11-14 12:56:47,899 - Successfully joined group 0 with generation 8
+2017-11-14 12:56:47,902 - Setting newly assigned partitions [] for group 0
+2017-11-14 12:56:47,902 - partitions assigned: []
+2017-11-14 12:57:02,995 - Revoking previously assigned partitions [] for group 0
+2017-11-14 12:57:02,995 - partitions revoked: []
+2017-11-14 12:57:02,995 - (Re-)joining group 0
+2017-11-14 12:57:03,001 - Successfully joined group 0 with generation 9
+2017-11-14 12:57:03,002 - Setting newly assigned partitions [test1-0] for group 0
+2017-11-14 12:57:03,002 - partitions assigned: [test1-0]

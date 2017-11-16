@@ -6,9 +6,9 @@
 
     <parent>
         <groupId>org.taian</groupId>
-        <artifactId>taian-File2DB</artifactId>
+        <artifactId>file2DB</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../taianFile2DB</relativePath>
+        <relativePath>../file2DB</relativePath>
     </parent>
 
     <groupId>org.taian</groupId>
