@@ -26,7 +26,7 @@ import static junit.framework.TestCase.assertTrue;
 
 public class MyTest {
 
-    Logger logger = LoggerFactory.getLogger(this.getClass());
+    /*Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Test
     public void testAutoCommit() throws Exception {
@@ -98,5 +98,5 @@ public class MyTest {
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, IntegerSerializer.class);
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         return props;
-    }
+    }*/
 }
