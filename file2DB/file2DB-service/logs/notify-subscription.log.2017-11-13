@@ -1,0 +1,1058 @@
+2017-11-12 17:50:32,788 - Start auto
+2017-11-12 17:50:32,958 - ConsumerConfig values: 
+	auto.commit.interval.ms = 100
+	auto.offset.reset = latest
+	bootstrap.servers = [172.16.247.100:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-12 17:50:33,170 - Kafka version : 0.11.0.0
+2017-11-12 17:50:33,170 - Kafka commitId : cb8625948210849f
+2017-11-12 17:50:34,048 - Error while fetching metadata with correlation id 2 : {topic1=LEADER_NOT_AVAILABLE, topic2=LEADER_NOT_AVAILABLE}
+2017-11-12 17:50:34,064 - Discovered coordinator 172.16.247.100:9092 (id: 2147483647 rack: null) for group group1.
+2017-11-12 17:50:34,073 - Revoking previously assigned partitions [] for group group1
+2017-11-12 17:50:34,073 - partitions revoked: []
+2017-11-12 17:50:34,074 - (Re-)joining group group1
+2017-11-12 17:50:34,203 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [172.16.247.100:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.IntegerSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2017-11-12 17:50:34,229 - Error while fetching metadata with correlation id 6 : {topic1=LEADER_NOT_AVAILABLE, topic2=LEADER_NOT_AVAILABLE}
+2017-11-12 17:50:34,242 - The following subscribed topics are not assigned to any members in the group group1 : [topic1, topic2] 
+2017-11-12 17:50:34,254 - Kafka version : 0.11.0.0
+2017-11-12 17:50:34,254 - Kafka commitId : cb8625948210849f
+2017-11-12 17:50:34,337 - Successfully joined group group1 with generation 1
+2017-11-12 17:50:34,431 - Error while fetching metadata with correlation id 8 : {topic1=LEADER_NOT_AVAILABLE, topic2=LEADER_NOT_AVAILABLE}
+2017-11-12 17:50:34,431 - Setting newly assigned partitions [] for group group1
+2017-11-12 17:50:34,432 - partitions assigned: []
+2017-11-12 17:50:34,554 - Error while fetching metadata with correlation id 9 : {topic1=LEADER_NOT_AVAILABLE, topic2=LEADER_NOT_AVAILABLE}
+2017-11-12 17:50:34,659 - Revoking previously assigned partitions [] for group group1
+2017-11-12 17:50:34,660 - partitions revoked: []
+2017-11-12 17:50:34,660 - (Re-)joining group group1
+2017-11-12 17:50:34,668 - Successfully joined group group1 with generation 2
+2017-11-12 17:50:34,668 - Setting newly assigned partitions [topic1-0, topic2-0] for group group1
+2017-11-12 17:50:34,668 - partitions assigned: [topic1-0, topic2-0]
+2017-11-12 17:53:38,536 - Start auto
+2017-11-12 17:53:38,712 - ConsumerConfig values: 
+	auto.commit.interval.ms = 100
+	auto.offset.reset = latest
+	bootstrap.servers = [172.16.247.100:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group1
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-12 17:53:38,933 - Kafka version : 0.11.0.0
+2017-11-12 17:53:38,933 - Kafka commitId : cb8625948210849f
+2017-11-12 17:53:39,087 - Discovered coordinator 172.16.247.100:9092 (id: 2147483647 rack: null) for group group1.
+2017-11-12 17:53:39,089 - Revoking previously assigned partitions [] for group group1
+2017-11-12 17:53:39,090 - partitions revoked: []
+2017-11-12 17:53:39,091 - (Re-)joining group group1
+2017-11-12 17:53:39,111 - Successfully joined group group1 with generation 4
+2017-11-12 17:53:39,113 - Setting newly assigned partitions [topic1-0, topic2-0] for group group1
+2017-11-12 17:53:39,113 - partitions assigned: [topic1-0, topic2-0]
+2017-11-12 17:53:39,957 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [172.16.247.100:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.IntegerSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2017-11-12 17:53:39,975 - Kafka version : 0.11.0.0
+2017-11-12 17:53:39,975 - Kafka commitId : cb8625948210849f
+2017-11-12 17:53:40,015 - received: ConsumerRecord(topic = topic1, partition = 0, offset = 0, CreateTime = 1510480419987, serialized key size = 4, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 0, value = foo)
+2017-11-12 17:53:40,016 - received: ConsumerRecord(topic = topic1, partition = 0, offset = 1, CreateTime = 1510480419996, serialized key size = 4, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 2, value = bar)
+2017-11-12 17:53:40,016 - received: ConsumerRecord(topic = topic1, partition = 0, offset = 2, CreateTime = 1510480419996, serialized key size = 4, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 0, value = baz)
+2017-11-12 17:53:40,016 - received: ConsumerRecord(topic = topic1, partition = 0, offset = 3, CreateTime = 1510480419996, serialized key size = 4, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 2, value = qux)
+2017-11-12 17:53:40,049 - Consumer stopped
+2017-11-12 17:53:40,050 - Stop auto
+2017-11-12 22:48:05,032 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-12 22:48:05,042 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-12 22:48:05,045 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@49993335, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@20322d26, org.springframework.test.context.support.DirtiesContextTestExecutionListener@192b07fd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@64bfbc86, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@64bf3bbf]
+2017-11-12 22:48:05,147 - Loading XML bean definitions from URL [file:/Users/duandingyang/IdeaProjects/file2DB-service/target/classes/spring/spring-producer.xml]
+2017-11-12 22:48:05,334 - Refreshing org.springframework.context.support.GenericApplicationContext@9660f4e: startup date [Sun Nov 12 22:48:05 CST 2017]; root of context hierarchy
+2017-11-12 22:48:05,812 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [172.16.247.100:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.IntegerSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 10
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2017-11-12 22:48:05,969 - The configuration 'group.id' was supplied but isn't a known config.
+2017-11-12 22:48:05,970 - Kafka version : 0.11.0.0
+2017-11-12 22:48:05,970 - Kafka commitId : cb8625948210849f
+2017-11-12 22:48:06,159 - Error while fetching metadata with correlation id 1 : {test1=LEADER_NOT_AVAILABLE}
+2017-11-12 22:48:06,289 - Closing org.springframework.context.support.GenericApplicationContext@9660f4e: startup date [Sun Nov 12 22:48:05 CST 2017]; root of context hierarchy
+2017-11-12 22:48:06,291 - Stopping beans in phase 0
+2017-11-12 22:48:06,291 - Closing the Kafka producer with timeoutMillis = 30000 ms.
+2017-11-12 22:48:47,516 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-12 22:48:47,527 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-12 22:48:47,531 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@49993335, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@20322d26, org.springframework.test.context.support.DirtiesContextTestExecutionListener@192b07fd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@64bfbc86, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@64bf3bbf]
+2017-11-12 22:48:47,636 - Loading XML bean definitions from URL [file:/Users/duandingyang/IdeaProjects/file2DB-service/target/classes/spring/spring-producer.xml]
+2017-11-12 22:48:47,803 - Refreshing org.springframework.context.support.GenericApplicationContext@9660f4e: startup date [Sun Nov 12 22:48:47 CST 2017]; root of context hierarchy
+2017-11-12 22:48:48,194 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [172.16.247.100:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.IntegerSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 10
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2017-11-12 22:48:48,327 - The configuration 'group.id' was supplied but isn't a known config.
+2017-11-12 22:48:48,329 - Kafka version : 0.11.0.0
+2017-11-12 22:48:48,329 - Kafka commitId : cb8625948210849f
+2017-11-12 22:48:48,542 - Closing org.springframework.context.support.GenericApplicationContext@9660f4e: startup date [Sun Nov 12 22:48:47 CST 2017]; root of context hierarchy
+2017-11-12 22:48:48,544 - Stopping beans in phase 0
+2017-11-12 22:48:48,545 - Closing the Kafka producer with timeoutMillis = 30000 ms.
+2017-11-13 10:54:06,753 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-13 10:54:06,753 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-13 10:54:06,768 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6e06451e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@59494225, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6e1567f1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5cb9f472, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@cb644e]
+2017-11-13 10:54:06,909 - Loading XML bean definitions from URL [file:/F:/git/mavenProject/file2DB-service/target/classes/spring/spring-producer.xml]
+2017-11-13 10:54:07,337 - Refreshing org.springframework.context.support.GenericApplicationContext@32709393: startup date [Mon Nov 13 10:54:07 CST 2017]; root of context hierarchy
+2017-11-13 10:54:07,868 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.170.45:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.IntegerSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 10
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2017-11-13 10:54:08,227 - Kafka version : 0.11.0.0
+2017-11-13 10:54:08,227 - Kafka commitId : cb8625948210849f
+2017-11-13 10:54:29,270 - Connection to node -1 could not be established. Broker may not be available.
+2017-11-13 10:56:33,230 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-13 10:56:33,230 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-13 10:56:33,245 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6e06451e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@59494225, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6e1567f1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5cb9f472, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@cb644e]
+2017-11-13 10:56:33,308 - Loading XML bean definitions from URL [file:/F:/git/mavenProject/file2DB-service/target/classes/spring/spring-producer.xml]
+2017-11-13 10:56:33,417 - Refreshing org.springframework.context.support.GenericApplicationContext@32709393: startup date [Mon Nov 13 10:56:33 CST 2017]; root of context hierarchy
+2017-11-13 10:56:33,730 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.170.45:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.IntegerSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 10
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2017-11-13 10:56:33,870 - Kafka version : 0.11.0.0
+2017-11-13 10:56:33,870 - Kafka commitId : cb8625948210849f
+2017-11-13 10:56:54,927 - Connection to node -1 could not be established. Broker may not be available.
+2017-11-13 11:03:50,495 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-13 11:03:50,495 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-13 11:03:50,511 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6e06451e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@59494225, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6e1567f1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5cb9f472, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@cb644e]
+2017-11-13 11:03:50,558 - Loading XML bean definitions from URL [file:/F:/git/mavenProject/file2DB-service/target/classes/spring/spring-producer.xml]
+2017-11-13 11:03:50,683 - Refreshing org.springframework.context.support.GenericApplicationContext@32709393: startup date [Mon Nov 13 11:03:50 CST 2017]; root of context hierarchy
+2017-11-13 11:03:51,027 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.170.45:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.IntegerSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 10
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2017-11-13 11:03:51,136 - Kafka version : 0.11.0.0
+2017-11-13 11:03:51,136 - Kafka commitId : cb8625948210849f
+2017-11-13 11:04:12,152 - Connection to node -1 could not be established. Broker may not be available.
+2017-11-13 11:04:33,239 - Connection to node -1 could not be established. Broker may not be available.
+2017-11-13 11:04:51,136 - Exception thrown when sending a message with key='null' and payload='www.aaaaaa.com' to topic test1:
+org.apache.kafka.common.errors.TimeoutException: Failed to update metadata after 60000 ms.
+2017-11-13 11:04:51,136 - Closing org.springframework.context.support.GenericApplicationContext@32709393: startup date [Mon Nov 13 11:03:50 CST 2017]; root of context hierarchy
+2017-11-13 11:04:51,152 - Stopping beans in phase 0
+2017-11-13 11:04:51,152 - Closing the Kafka producer with timeoutMillis = 30000 ms.
+2017-11-13 11:07:03,173 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-13 11:07:03,173 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-13 11:07:03,189 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6e06451e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@59494225, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6e1567f1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5cb9f472, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@cb644e]
+2017-11-13 11:07:03,236 - Loading XML bean definitions from URL [file:/F:/git/mavenProject/file2DB-service/target/classes/spring/spring-producer.xml]
+2017-11-13 11:07:03,345 - Refreshing org.springframework.context.support.GenericApplicationContext@32709393: startup date [Mon Nov 13 11:07:03 CST 2017]; root of context hierarchy
+2017-11-13 11:07:03,689 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.170.45:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.IntegerSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 10
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2017-11-13 11:07:03,845 - Kafka version : 0.11.0.0
+2017-11-13 11:07:03,845 - Kafka commitId : cb8625948210849f
+2017-11-13 11:07:24,873 - Connection to node -1 could not be established. Broker may not be available.
+2017-11-13 11:07:45,955 - Connection to node -1 could not be established. Broker may not be available.
+2017-11-13 11:08:03,845 - Exception thrown when sending a message with key='null' and payload='www.aaaaaa.com' to topic test1:
+org.apache.kafka.common.errors.TimeoutException: Failed to update metadata after 60000 ms.
+2017-11-13 11:08:03,849 - Closing org.springframework.context.support.GenericApplicationContext@32709393: startup date [Mon Nov 13 11:07:03 CST 2017]; root of context hierarchy
+2017-11-13 11:08:03,851 - Stopping beans in phase 0
+2017-11-13 11:08:03,852 - Closing the Kafka producer with timeoutMillis = 30000 ms.
+2017-11-13 11:45:55,705 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-13 11:45:55,705 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-13 11:45:55,721 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6e06451e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@59494225, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6e1567f1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5cb9f472, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@cb644e]
+2017-11-13 11:45:55,783 - Loading XML bean definitions from URL [file:/F:/git/mavenProject/file2DB-service/target/classes/spring/spring-producer.xml]
+2017-11-13 11:45:55,893 - Refreshing org.springframework.context.support.GenericApplicationContext@32709393: startup date [Mon Nov 13 11:45:55 CST 2017]; root of context hierarchy
+2017-11-13 11:45:56,268 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.152.45:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.IntegerSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 10
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2017-11-13 11:45:56,362 - Kafka version : 0.11.0.0
+2017-11-13 11:45:56,362 - Kafka commitId : cb8625948210849f
+2017-11-13 11:45:56,549 - Error while fetching metadata with correlation id 1 : {test1=LEADER_NOT_AVAILABLE}
+2017-11-13 11:45:56,659 - Error while fetching metadata with correlation id 3 : {test1=LEADER_NOT_AVAILABLE}
+2017-11-13 11:45:56,862 - Closing org.springframework.context.support.GenericApplicationContext@32709393: startup date [Mon Nov 13 11:45:55 CST 2017]; root of context hierarchy
+2017-11-13 11:45:56,862 - Stopping beans in phase 0
+2017-11-13 11:45:56,862 - Closing the Kafka producer with timeoutMillis = 30000 ms.
+2017-11-13 11:47:03,227 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-13 11:47:03,227 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-13 11:47:03,242 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6e06451e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@59494225, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6e1567f1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5cb9f472, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@cb644e]
+2017-11-13 11:47:03,305 - Loading XML bean definitions from URL [file:/F:/git/mavenProject/file2DB-service/target/classes/spring/spring-producer.xml]
+2017-11-13 11:47:03,414 - Refreshing org.springframework.context.support.GenericApplicationContext@32709393: startup date [Mon Nov 13 11:47:03 CST 2017]; root of context hierarchy
+2017-11-13 11:47:03,805 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.152.45:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.IntegerSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 10
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2017-11-13 11:47:03,961 - Kafka version : 0.11.0.0
+2017-11-13 11:47:03,961 - Kafka commitId : cb8625948210849f
+2017-11-13 11:47:04,211 - Closing org.springframework.context.support.GenericApplicationContext@32709393: startup date [Mon Nov 13 11:47:03 CST 2017]; root of context hierarchy
+2017-11-13 11:47:04,211 - Stopping beans in phase 0
+2017-11-13 11:47:04,211 - Closing the Kafka producer with timeoutMillis = 30000 ms.
+2017-11-13 12:42:50,571 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-13 12:42:50,571 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-13 12:42:50,571 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6e06451e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@59494225, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6e1567f1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5cb9f472, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@cb644e]
+2017-11-13 12:42:50,633 - Loading XML bean definitions from URL [file:/F:/git/mavenProject/file2DB-service/target/classes/spring/spring-producer.xml]
+2017-11-13 12:42:50,758 - Refreshing org.springframework.context.support.GenericApplicationContext@32709393: startup date [Mon Nov 13 12:42:50 CST 2017]; root of context hierarchy
+2017-11-13 12:42:51,102 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.152.45:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.IntegerSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 10
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2017-11-13 12:42:51,211 - Kafka version : 0.11.0.0
+2017-11-13 12:42:51,211 - Kafka commitId : cb8625948210849f
+2017-11-13 12:42:51,352 - Closing org.springframework.context.support.GenericApplicationContext@32709393: startup date [Mon Nov 13 12:42:50 CST 2017]; root of context hierarchy
+2017-11-13 12:42:51,352 - Stopping beans in phase 0
+2017-11-13 12:42:51,352 - Closing the Kafka producer with timeoutMillis = 30000 ms.
+2017-11-13 13:06:11,123 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-13 13:06:11,139 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-13 13:06:11,139 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4cf777e8, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2f686d1f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3fee9989, org.springframework.test.context.transaction.TransactionalTestExecutionListener@73ad2d6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7085bdee]
+2017-11-13 13:06:11,232 - Loading XML bean definitions from URL [file:/F:/git/mavenProject/file2DB-service/target/classes/spring/spring-producer.xml]
+2017-11-13 13:06:11,342 - Refreshing org.springframework.context.support.GenericApplicationContext@610694f1: startup date [Mon Nov 13 13:06:11 CST 2017]; root of context hierarchy
+2017-11-13 13:06:11,686 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.152.45:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.IntegerSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 10
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2017-11-13 13:06:11,780 - Kafka version : 0.11.0.0
+2017-11-13 13:06:11,780 - Kafka commitId : cb8625948210849f
+2017-11-13 13:06:11,929 - Closing org.springframework.context.support.GenericApplicationContext@610694f1: startup date [Mon Nov 13 13:06:11 CST 2017]; root of context hierarchy
+2017-11-13 13:06:11,929 - Stopping beans in phase 0
+2017-11-13 13:06:11,929 - Closing the Kafka producer with timeoutMillis = 30000 ms.
+2017-11-13 13:06:24,532 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-13 13:06:24,532 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-13 13:06:24,548 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4cf777e8, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2f686d1f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3fee9989, org.springframework.test.context.transaction.TransactionalTestExecutionListener@73ad2d6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7085bdee]
+2017-11-13 13:06:24,610 - Loading XML bean definitions from URL [file:/F:/git/mavenProject/file2DB-service/target/classes/spring/spring-producer.xml]
+2017-11-13 13:06:24,735 - Refreshing org.springframework.context.support.GenericApplicationContext@610694f1: startup date [Mon Nov 13 13:06:24 CST 2017]; root of context hierarchy
+2017-11-13 13:06:25,098 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.152.45:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.IntegerSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 10
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2017-11-13 13:06:25,239 - Kafka version : 0.11.0.0
+2017-11-13 13:06:25,239 - Kafka commitId : cb8625948210849f
+2017-11-13 13:06:25,390 - Closing org.springframework.context.support.GenericApplicationContext@610694f1: startup date [Mon Nov 13 13:06:24 CST 2017]; root of context hierarchy
+2017-11-13 13:06:25,392 - Stopping beans in phase 0
+2017-11-13 13:06:25,395 - Closing the Kafka producer with timeoutMillis = 30000 ms.
+2017-11-13 13:14:57,726 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-13 13:14:57,726 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-13 13:14:57,751 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4cf777e8, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2f686d1f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3fee9989, org.springframework.test.context.transaction.TransactionalTestExecutionListener@73ad2d6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7085bdee]
+2017-11-13 13:14:57,803 - Loading XML bean definitions from URL [file:/F:/git/mavenProject/file2DB-service/target/classes/spring/spring-producer.xml]
+2017-11-13 13:14:57,913 - Refreshing org.springframework.context.support.GenericApplicationContext@610694f1: startup date [Mon Nov 13 13:14:57 CST 2017]; root of context hierarchy
+2017-11-13 13:14:58,268 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.152.45:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.IntegerSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 10
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2017-11-13 13:14:58,361 - Kafka version : 0.11.0.0
+2017-11-13 13:14:58,361 - Kafka commitId : cb8625948210849f
+2017-11-13 13:14:58,518 - Closing org.springframework.context.support.GenericApplicationContext@610694f1: startup date [Mon Nov 13 13:14:57 CST 2017]; root of context hierarchy
+2017-11-13 13:14:58,518 - Stopping beans in phase 0
+2017-11-13 13:14:58,518 - Closing the Kafka producer with timeoutMillis = 30000 ms.

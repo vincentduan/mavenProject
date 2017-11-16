@@ -11,8 +11,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>../file2DB-service</module>
-        <module>../file2DB-web</module>
+        <module>./file2DB-service</module>
+        <module>./file2DB-web</module>
     </modules>
 
 
