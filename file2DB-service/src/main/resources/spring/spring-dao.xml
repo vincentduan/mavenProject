@@ -5,14 +5,7 @@
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<!-- 配置整合mybatis过程 -->
-	<!-- 1. 配置数据库相关参数 properties的属性：${url} -->
-	<!-- <context:property-override location="classpath:jdbc.properties"/> -->
-	<!-- <util:properties id="jdbc" location="classpath:jdbc.properties"/> -->
-	<bean id="propertyConfigurer"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
-		<property name="location" value="classpath:jdbc.properties"  />
-	</bean>
+
 	<!-- 2.数据库连接池 -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<!-- 配置连接池属性 -->

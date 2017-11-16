@@ -6,7 +6,21 @@
 
 	<!-- 扫描service包下所有使用注解的类型 -->
 	<!--<context:component-scan base-package="org.taian.service" />-->
-	
+
+    <!-- 配置整合mybatis过程 -->
+    <!-- 1. 配置数据库相关参数 properties的属性：${url} -->
+    <!-- <context:property-override location="classpath:jdbc.properties"/> -->
+    <!-- <util:properties id="jdbc" location="classpath:jdbc.properties"/> -->
+    <bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
+        <property name="locations">
+            <list>
+                <value>classpath:jdbc.properties</value>
+                <value>classpath:kafka.properties</value>
+            </list>
+        </property>
+    </bean>
+
 	<!-- 配置事务管理器 -->
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<!-- 注入数据库的连接池 -->
