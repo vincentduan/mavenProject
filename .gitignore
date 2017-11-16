@@ -8,6 +8,7 @@ vincent-kafka/target/
 vincent-kafka/vincent-kafka.iml
 
 file2DB-service/target/
+file2DB-service/logs/
 file2DB-service/.idea/
 file2DB-service/file2DB-service.iml
 taianFile2DB/.idea/
