@@ -28,7 +28,8 @@ public class IndexController {
     @ResponseBody
     @RequestMapping(value = "test", method = RequestMethod.GET)
     public String index(){
-        File file = new File("D:/test/ddy.txt");
+        //File file = new File("D:/test/ddy.txt");
+        File file = new File("/Users/duandingyang/test/ddy.txt");
         try {
             LineIterator it = FileUtils.lineIterator(file, "UTF-8");
             while (it.hasNext()) {

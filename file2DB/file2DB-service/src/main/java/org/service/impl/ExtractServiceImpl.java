@@ -33,4 +33,40 @@ public class ExtractServiceImpl implements ExtractService {
         return null;
     }
 
+    @Override
+    public String tblcf1c18ForOne(String[] cf1c18) {
+        extractDao.updateMysqlPerCf1C18ForOne(cf1c18);
+        return null;
+    }
+
+    @Override
+    public String tblcf1c19ForOne(String[] cf1c19) {
+        extractDao.updateMysqlPerCf1C19ForOne(cf1c19);
+        return null;
+    }
+
+    @Override
+    public String tblcf1c28ForOne(String[] cf1c28) {
+        extractDao.updateMysqlPerCf1C28ForOne(cf1c28);
+        return null;
+    }
+
+    @Override
+    public String tblcf1c32ForOne(String[] cf1c32) {
+        extractDao.updateMysqlPerCf1C32ForOne(cf1c32);
+        return null;
+    }
+
+    @Override
+    public String tblcf1c39ForOne(String[] cf1c39) {
+        extractDao.updateMysqlPerCf1C39ForOne(cf1c39);
+        return null;
+    }
+
+    @Override
+    public String tblcf1c50ForOne(String[] cf1c50) {
+        extractDao.updateMysqlPerCf1C50ForOne(cf1c50);
+        return null;
+    }
+
 }

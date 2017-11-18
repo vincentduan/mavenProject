@@ -18,4 +18,34 @@
         </foreach>
     </select>
 
+    <select id="updateMysqlPerCf1C18ForOne">
+        insert ignore into tbl_per_cf1_c18 (cf1, c18) values
+            ('${item[0]}', '${item[1]}')
+    </select>
+
+    <select id="updateMysqlPerCf1C19ForOne">
+        insert ignore into tbl_per_cf1_c19 (cf1, c19) values
+        ('${item[0]}', '${item[1]}')
+    </select>
+
+    <select id="updateMysqlPerCf1C50ForOne">
+        insert ignore into tbl_per_cf1_c50 (cf1, c50) values
+        ('${item[0]}', '${item[1]}')
+    </select>
+
+    <select id="updateMysqlPerCf1C39ForOne">
+        insert ignore into tbl_per_cf1_c39 (cf1, c39) values
+        ('${item[0]}', '${item[1]}')
+    </select>
+
+    <select id="updateMysqlPerCf1C32ForOne">
+        insert ignore into tbl_per_cf1_c32 (cf1, c32) values
+        ('${item[0]}', '${item[1]}')
+    </select>
+
+    <select id="updateMysqlPerCf1C28ForOne">
+        insert ignore into tbl_per_cf1_c28 (cf1, c28) values
+        ('${item[0]}', '${item[1]}')
+    </select>
+
 </mapper>

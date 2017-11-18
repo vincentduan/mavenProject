@@ -30,7 +30,12 @@ public class KafkaConsumerListener implements MessageListener<Integer, String> {
         ExtractFromSentence.sentence = record.value();
         String[] cf1c18 = ExtractFromSentence.tblcf1c18();
         String[] cf1c19 = ExtractFromSentence.tblcf1c19();
-        try {
+        String[] cf1c28 = ExtractFromSentence.tblcf1c28();
+        String[] cf1c32 = ExtractFromSentence.tblcf1c32();
+        String[] cf1c39 = ExtractFromSentence.tblcf1c39();
+        String[] cf1c50 = ExtractFromSentence.tblcf1c50();
+
+        /*try {
             if(cf1c18[0] != null){
                 arrayBlockingQueue_cf1c18.put(cf1c18);
             }
@@ -64,7 +69,27 @@ public class KafkaConsumerListener implements MessageListener<Integer, String> {
                     cf1c19_list.clear();
                 }
             });
+        }*/
+        if(cf1c18[0] != null){
+            String c18 = extractService.tblcf1c18ForOne(cf1c18);
         }
+        if (cf1c19[0] != null){
+            String c19 = extractService.tblcf1c19ForOne(cf1c19);
+        }
+        if(cf1c28[0] != null){
+            String c28 = extractService.tblcf1c28ForOne(cf1c28);
+        }
+        if(cf1c32[0] != null){
+            String c32 = extractService.tblcf1c32ForOne(cf1c32);
+        }
+        if(cf1c39[0] != null){
+            String c39 = extractService.tblcf1c39ForOne(cf1c39);
+        }
+        if(cf1c50[0] != null){
+            String c50 = extractService.tblcf1c50ForOne(cf1c50);
+        }
+
+
     }
 
 

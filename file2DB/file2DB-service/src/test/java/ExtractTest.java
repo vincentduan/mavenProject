@@ -47,23 +47,18 @@ public class ExtractTest {
     }
 
     @Test
-    public void producerTest(){
-        File file = new File("D:/test/");
-        try {
-            LineIterator it = FileUtils.lineIterator(file, "UTF-8");
-            while (it.hasNext()) {
-                String lineTxt = it.nextLine();
-                kafkaTemplate.send("test1",lineTxt);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    @Test
     public void producerTestSimple(){
         String lineTxt = "{ \"index\" : { \"_index\" : \"test\", \"_type\" : \"t3\", \"_id\" : \"10000000\" } }\n" +
                 "{\"cf1\":\"0000008207\", \"cf2\":\"20170808023304\", \"cf3\":{\"c42\":{\"c4\":\"1100008207\"}, \"d1\":{\"c4\":\"1000004751\"}, \"c43\":\"chat\", \"d2\":\"c++\"}, \"cf4\":{\"c18\":\"466187329633641\", \"c19\":\"231899539124898\", \"c32\":\"92541820110\", \"c28\":\"202118428730\", \"c20\":\"1.5.2.8\", \"c50\":\"1100008207\"}, \"cf5\":\"5\", \"cf6\":\"t3\", \"cf7\":\"20170808\", \"cf8\":\"reg1\"}";
         kafkaTemplate.send("test1",lineTxt);
+    }
+
+    @Test
+    public void testExtract2(){
+        String[] str = new String[2];
+        str[0]="0022";
+        str[1]="0033";
+        extractDao.updateMysqlPerCf1C18ForOne(str);
     }
 
 }
