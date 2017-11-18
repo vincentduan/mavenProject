@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.dao.ExtractDao">
+
+    <select id="updateMysqlPerCf1C18" parameterType="java.util.List">
+        insert ignore into tbl_per_cf1_c18 (cf1, c18) values
+        <foreach collection="list" index="index" item="item" separator=",">
+            ('${item[0]}', '${item[1]}')
+        </foreach>
+    </select>
+
+    <select id="updateMysqlPerCf1C19" parameterType="java.util.List">
+        insert ignore into tbl_per_cf1_c19 (cf1, c19) values
+        <foreach collection="list" index="index" item="item" separator=",">
+            ('${item[0]}', '${item[1]}')
+        </foreach>
+    </select>
+
+</mapper>

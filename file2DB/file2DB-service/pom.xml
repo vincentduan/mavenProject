@@ -8,7 +8,6 @@
         <groupId>org.taian</groupId>
         <artifactId>file2DB</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>./file2DB</relativePath>
     </parent>
 
     <groupId>org.taian</groupId>
@@ -18,6 +17,11 @@
     <packaging>jar</packaging>
 
     <dependencies>
+        <dependency>
+            <groupId>org.taian</groupId>
+            <artifactId>file2DB-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
@@ -62,6 +66,12 @@
             <groupId>c3p0</groupId>
             <artifactId>c3p0</artifactId>
             <version>0.9.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
