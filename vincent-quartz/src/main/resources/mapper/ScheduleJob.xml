@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.quartz.dao.ScheduleJobDao">
+
+    <select id="queryObject" resultType="org.quartz.domain.ScheduleJobEntity">
+        SELECT job_id,bean_name,method_name,params,cron_expression,status,remark,create_time from schedule_job where job_id='1'
+    </select>
+
+    <select id="queryList" resultType="org.quartz.domain.ScheduleJobEntity">
+        select * from schedule_job where job_id = #{scheduleJobQuery.job_Id}
+    </select>
+
+</mapper>
