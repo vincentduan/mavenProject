@@ -6,16 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="vincent-common" />
         <module name="vincent-job" />
-        <module name="vincent-kafka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="mavenProject" target="1.8" />
-      <module name="vincent-common" target="1.8" />
       <module name="vincent-job" target="1.8" />
-      <module name="vincent-kafka" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

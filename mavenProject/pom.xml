@@ -13,7 +13,7 @@
 
     <modules>
         <module>../vincent-common</module>
-        <module>../vincent-job</module>
+        <module>../vincent-quartz</module>
         <module>../vincent-kafka</module>
     </modules>
 

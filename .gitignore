@@ -1,7 +1,7 @@
-mavenTest/target/
-mavenTest/.idea/
-vincent-job/target/
-vincent-job/vincent-job.iml
+mavenProject/target/
+mavenProject/.idea/
+vincent-quartz/target/
+vincent-quartz/vincent-quartz.iml
 vincent-common/target/
 vincent-common/vincent-common.iml
 vincent-kafka/target/
