@@ -1,9 +1,14 @@
 package org.taian;
 
 import org.ExtractUtils.ExtractFromSentence;
+import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.joda.time.DateTime;
 import org.service.ExtractService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.listener.ConsumerAwareMessageListener;
 import org.springframework.kafka.listener.MessageListener;
 
 import java.util.ArrayList;
@@ -13,10 +18,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class KafkaConsumerListener implements MessageListener<Integer, String> {
+public class KafkaConsumerListener implements ConsumerAwareMessageListener<Integer, String> {
 
     @Autowired
     ExtractService extractService;
+    @Autowired
+    Integer countNum;
 
     List<String[]> cf1c18_list = new ArrayList<>();
     List<String[]> cf1c19_list = new ArrayList<>();
@@ -25,8 +32,17 @@ public class KafkaConsumerListener implements MessageListener<Integer, String> {
     ArrayBlockingQueue<String[]> arrayBlockingQueue_cf1c18 = new ArrayBlockingQueue<>(10);
     ArrayBlockingQueue<String[]> arrayBlockingQueue_cf1c19 = new ArrayBlockingQueue<>(10);
 
+    private static final Logger logger = LoggerFactory.getLogger(KafkaConsumerListener.class);
+
     @Override
-    public void onMessage(ConsumerRecord<Integer, String> record) {
+    public void onMessage(ConsumerRecord<Integer, String> record, Consumer<?, ?> consumer) {
+        if((record.value().toString()).equals("start")){
+            System.out.println("start: " + new DateTime(System.currentTimeMillis()));
+        }
+        if ((record.value().toString()).equals("end")) {
+            System.out.println("end: " + new DateTime(System.currentTimeMillis()));
+        }
+        //System.out.println("consumer id: "+consumer);
         ExtractFromSentence.sentence = record.value();
         String[] cf1c18 = ExtractFromSentence.tblcf1c18();
         String[] cf1c19 = ExtractFromSentence.tblcf1c19();
@@ -70,28 +86,26 @@ public class KafkaConsumerListener implements MessageListener<Integer, String> {
                 }
             });
         }*/
-        if(cf1c18[0] != null){
+        if (cf1c18[0] != null) {
             String c18 = extractService.tblcf1c18ForOne(cf1c18);
         }
-        if (cf1c19[0] != null){
+        if (cf1c19[0] != null) {
             String c19 = extractService.tblcf1c19ForOne(cf1c19);
         }
-        if(cf1c28[0] != null){
+        if (cf1c28[0] != null) {
             String c28 = extractService.tblcf1c28ForOne(cf1c28);
         }
-        if(cf1c32[0] != null){
+        if (cf1c32[0] != null) {
             String c32 = extractService.tblcf1c32ForOne(cf1c32);
         }
-        if(cf1c39[0] != null){
+        if (cf1c39[0] != null) {
             String c39 = extractService.tblcf1c39ForOne(cf1c39);
         }
-        if(cf1c50[0] != null){
+        if (cf1c50[0] != null) {
             String c50 = extractService.tblcf1c50ForOne(cf1c50);
         }
 
-
     }
-
 
 
 }

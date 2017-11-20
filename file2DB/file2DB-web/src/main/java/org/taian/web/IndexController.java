@@ -7,6 +7,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.File;
@@ -27,14 +28,14 @@ public class IndexController {
 
     @ResponseBody
     @RequestMapping(value = "test", method = RequestMethod.GET)
-    public String index(){
-        //File file = new File("D:/test/ddy.txt");
-        File file = new File("/Users/duandingyang/test/ddy.txt");
+    public String index(@RequestParam("fileName") String fileName){
+        File file = new File(fileName);
+        //File file = new File("/root/tmp_data/fakeData/data20171024/FakeData_t3.txt");
         try {
             LineIterator it = FileUtils.lineIterator(file, "UTF-8");
             while (it.hasNext()) {
                 String lineTxt = it.nextLine();
-                kafkaTemplate.send("test1",lineTxt);
+                kafkaTemplate.send("topic3",lineTxt);
             }
         } catch (IOException e) {
             e.printStackTrace();
