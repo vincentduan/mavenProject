@@ -4,9 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
          http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="countNum" class="java.lang.Integer">
-        <constructor-arg value="1"/>
-    </bean>
+
     <!-- 定义consumer的参数 -->
     <bean id="consumer1" class="java.util.HashMap">
         <constructor-arg>
@@ -23,21 +21,7 @@
             </map>
         </constructor-arg>
     </bean>
-    <bean id="consumer2" class="java.util.HashMap">
-        <constructor-arg>
-            <map>
-                <entry key="bootstrap.servers" value="${bootstrap.servers}" />
-                <entry key="group.id" value="0" />
-                <entry key="enable.auto.commit" value="true" />
-                <entry key="auto.commit.interval.ms" value="1000" />
-                <entry key="session.timeout.ms" value="15000" />
-                <entry key="key.deserializer"
-                       value="org.apache.kafka.common.serialization.IntegerDeserializer" />
-                <entry key="value.deserializer"
-                       value="org.apache.kafka.common.serialization.StringDeserializer" />
-            </map>
-        </constructor-arg>
-    </bean>
+
 
     <!-- 创建consumerFactory bean -->
     <bean id="consumerFactory1" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
@@ -45,31 +29,285 @@
             <ref bean="consumer1" />
         </constructor-arg>
     </bean>
-    <bean id="consumerFactory2" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+    <!--<bean id="consumerFactory2" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer2" />
+            <ref bean="consumer1" />
         </constructor-arg>
     </bean>
+    <bean id="consumerFactory3" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory4" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory5" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory6" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory7" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory8" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory9" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory10" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory11" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory12" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory13" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory14" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory15" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory16" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory17" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory18" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory19" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>
+    <bean id="consumerFactory20" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumer1" />
+        </constructor-arg>
+    </bean>-->
+    
 
     <!-- 实际执行消息消费的类 -->
     <bean id="messageListernerConsumerService" class="org.taian.KafkaConsumerListener" />
+    <!--<bean id="messageListernerConsumerService2" class="org.taian.KafkaConsumerListener2" />
+    <bean id="messageListernerConsumerService3" class="org.taian.KafkaConsumerListener3" />
+    <bean id="messageListernerConsumerService4" class="org.taian.KafkaConsumerListener4" />
+    <bean id="messageListernerConsumerService5" class="org.taian.KafkaConsumerListener5" />
+    <bean id="messageListernerConsumerService6" class="org.taian.KafkaConsumerListener6" />
+    <bean id="messageListernerConsumerService7" class="org.taian.KafkaConsumerListener7" />
+    <bean id="messageListernerConsumerService8" class="org.taian.KafkaConsumerListener8" />
+    <bean id="messageListernerConsumerService9" class="org.taian.KafkaConsumerListener9" />
+    <bean id="messageListernerConsumerService10" class="org.taian.KafkaConsumerListener10" />
+    <bean id="messageListernerConsumerService11" class="org.taian.KafkaConsumerListener11" />
+    <bean id="messageListernerConsumerService12" class="org.taian.KafkaConsumerListener12" />
+    <bean id="messageListernerConsumerService13" class="org.taian.KafkaConsumerListener13" />
+    <bean id="messageListernerConsumerService14" class="org.taian.KafkaConsumerListener14" />
+    <bean id="messageListernerConsumerService15" class="org.taian.KafkaConsumerListener15" />
+    <bean id="messageListernerConsumerService16" class="org.taian.KafkaConsumerListener16" />
+    <bean id="messageListernerConsumerService17" class="org.taian.KafkaConsumerListener17" />
+    <bean id="messageListernerConsumerService18" class="org.taian.KafkaConsumerListener18" />
+    <bean id="messageListernerConsumerService19" class="org.taian.KafkaConsumerListener19" />
+    <bean id="messageListernerConsumerService20" class="org.taian.KafkaConsumerListener20" />-->
 
     <!-- 消费者容器配置信息 -->
     <bean id="containerProperties1" class="org.springframework.kafka.listener.config.ContainerProperties">
-        <constructor-arg value="topic3" />
+        <constructor-arg value="topic7" />
         <property name="messageListener" ref="messageListernerConsumerService" />
     </bean>
-    <bean id="containerProperties2" class="org.springframework.kafka.listener.config.ContainerProperties">
-        <constructor-arg value="topic3" />
-        <property name="messageListener" ref="messageListernerConsumerService" />
+    <!--<bean id="containerProperties2" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService2" />
     </bean>
+    <bean id="containerProperties3" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService3" />
+    </bean>
+    <bean id="containerProperties4" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService4" />
+    </bean>
+    <bean id="containerProperties5" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService5" />
+    </bean>
+    <bean id="containerProperties6" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService6" />
+    </bean>
+    <bean id="containerProperties7" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService7" />
+    </bean>
+    <bean id="containerProperties8" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService8" />
+    </bean>
+    <bean id="containerProperties9" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService9" />
+    </bean>
+    <bean id="containerProperties10" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService10" />
+    </bean>
+    <bean id="containerProperties11" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService11" />
+    </bean>
+    <bean id="containerProperties12" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService12" />
+    </bean>
+    <bean id="containerProperties13" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService13" />
+    </bean>
+    <bean id="containerProperties14" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService14" />
+    </bean>
+    <bean id="containerProperties15" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService15" />
+    </bean>
+    <bean id="containerProperties16" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService16" />
+    </bean>
+    <bean id="containerProperties17" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService17" />
+    </bean>
+    <bean id="containerProperties18" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService18" />
+    </bean>
+    <bean id="containerProperties19" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService19" />
+    </bean>
+    <bean id="containerProperties20" class="org.springframework.kafka.listener.config.ContainerProperties">
+        <constructor-arg value="topic7" />
+        <property name="messageListener" ref="messageListernerConsumerService20" />
+    </bean>-->
 
     <bean id="messageListenerContainer" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
         <constructor-arg ref="consumerFactory1" />
         <constructor-arg ref="containerProperties1" />
     </bean>
-    <bean id="messageListenerContainer2" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+    <!--<bean id="messageListenerContainer2" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
         <constructor-arg ref="consumerFactory2" />
         <constructor-arg ref="containerProperties2" />
     </bean>
+    <bean id="messageListenerContainer3" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory3" />
+        <constructor-arg ref="containerProperties3" />
+    </bean>
+    <bean id="messageListenerContainer4" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory4" />
+        <constructor-arg ref="containerProperties4" />
+    </bean>
+    <bean id="messageListenerContainer5" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory5" />
+        <constructor-arg ref="containerProperties5" />
+    </bean>
+    <bean id="messageListenerContainer6" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory6" />
+        <constructor-arg ref="containerProperties6" />
+    </bean>
+    <bean id="messageListenerContainer7" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory7" />
+        <constructor-arg ref="containerProperties7" />
+    </bean>
+    <bean id="messageListenerContainer8" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory8" />
+        <constructor-arg ref="containerProperties8" />
+    </bean>
+    <bean id="messageListenerContainer9" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory9" />
+        <constructor-arg ref="containerProperties9" />
+    </bean>
+    <bean id="messageListenerContainer10" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory10" />
+        <constructor-arg ref="containerProperties10" />
+    </bean>
+    <bean id="messageListenerContainer11" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory11" />
+        <constructor-arg ref="containerProperties11" />
+    </bean>
+    <bean id="messageListenerContainer12" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory12" />
+        <constructor-arg ref="containerProperties12" />
+    </bean>
+    <bean id="messageListenerContainer13" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory13" />
+        <constructor-arg ref="containerProperties13" />
+    </bean>
+    <bean id="messageListenerContainer14" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory14" />
+        <constructor-arg ref="containerProperties14" />
+    </bean>
+    <bean id="messageListenerContainer15" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory15" />
+        <constructor-arg ref="containerProperties15" />
+    </bean>
+    <bean id="messageListenerContainer16" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory16" />
+        <constructor-arg ref="containerProperties16" />
+    </bean>
+    <bean id="messageListenerContainer17" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory17" />
+        <constructor-arg ref="containerProperties17" />
+    </bean>
+    <bean id="messageListenerContainer18" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory18" />
+        <constructor-arg ref="containerProperties18" />
+    </bean>
+    <bean id="messageListenerContainer19" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory19" />
+        <constructor-arg ref="containerProperties19" />
+    </bean>
+    <bean id="messageListenerContainer20" class="org.springframework.kafka.listener.KafkaMessageListenerContainer" init-method="doStart">
+        <constructor-arg ref="consumerFactory20" />
+        <constructor-arg ref="containerProperties20" />
+    </bean>-->
 </beans>

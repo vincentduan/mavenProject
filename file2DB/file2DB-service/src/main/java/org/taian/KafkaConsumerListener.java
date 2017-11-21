@@ -1,5 +1,6 @@
 package org.taian;
 
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.ExtractUtils.ExtractFromSentence;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.listener.ConsumerAwareMessageListener;
 import org.springframework.kafka.listener.MessageListener;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -22,8 +24,9 @@ public class KafkaConsumerListener implements ConsumerAwareMessageListener<Integ
 
     @Autowired
     ExtractService extractService;
+
     @Autowired
-    Integer countNum;
+    ComboPooledDataSource dataSource;
 
     List<String[]> cf1c18_list = new ArrayList<>();
     List<String[]> cf1c19_list = new ArrayList<>();
@@ -42,14 +45,15 @@ public class KafkaConsumerListener implements ConsumerAwareMessageListener<Integ
         if ((record.value().toString()).equals("end")) {
             System.out.println("end: " + new DateTime(System.currentTimeMillis()));
         }
+
         //System.out.println("consumer id: "+consumer);
-        ExtractFromSentence.sentence = record.value();
-        String[] cf1c18 = ExtractFromSentence.tblcf1c18();
-        String[] cf1c19 = ExtractFromSentence.tblcf1c19();
-        String[] cf1c28 = ExtractFromSentence.tblcf1c28();
-        String[] cf1c32 = ExtractFromSentence.tblcf1c32();
-        String[] cf1c39 = ExtractFromSentence.tblcf1c39();
-        String[] cf1c50 = ExtractFromSentence.tblcf1c50();
+        /*ExtractFromSentence extractFromSentence = new ExtractFromSentence(record.value());
+        String[] cf1c18 = extractFromSentence.tblcf1c18();
+        String[] cf1c19 = extractFromSentence.tblcf1c19();
+        String[] cf1c28 = extractFromSentence.tblcf1c28();
+        String[] cf1c32 = extractFromSentence.tblcf1c32();
+        String[] cf1c39 = extractFromSentence.tblcf1c39();
+        String[] cf1c50 = extractFromSentence.tblcf1c50();*/
 
         /*try {
             if(cf1c18[0] != null){
@@ -86,7 +90,7 @@ public class KafkaConsumerListener implements ConsumerAwareMessageListener<Integ
                 }
             });
         }*/
-        if (cf1c18[0] != null) {
+        /*if (cf1c18[0] != null) {
             String c18 = extractService.tblcf1c18ForOne(cf1c18);
         }
         if (cf1c19[0] != null) {
@@ -100,10 +104,18 @@ public class KafkaConsumerListener implements ConsumerAwareMessageListener<Integ
         }
         if (cf1c39[0] != null) {
             String c39 = extractService.tblcf1c39ForOne(cf1c39);
+            try {
+                System.out.println("总连接数:" + dataSource.getNumConnections());
+                System.out.println("最大连接池数:" + dataSource.getMaxPoolSize());
+                System.out.println("正在使用连接数:"+dataSource.getNumBusyConnections());
+                System.out.println("空闲连接数:"+dataSource.getNumIdleConnections());
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         if (cf1c50[0] != null) {
             String c50 = extractService.tblcf1c50ForOne(cf1c50);
-        }
+        }*/
 
     }
 
