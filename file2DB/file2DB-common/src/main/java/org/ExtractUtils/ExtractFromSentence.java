@@ -12,26 +12,31 @@ import java.util.regex.Pattern;
  */
 public class ExtractFromSentence {
 
-    public static String sentence;
+    private String sentence;
+
+    public ExtractFromSentence(String sentence) {
+        this.sentence = sentence;
+    }
 
     public static void main(String[] args) {
-        sentence = "{ \"index\" : { \"_index\" : \"test\", \"_type\" : \"t3\", \"_id\" : \"10000000\" } }\n" +
+        String sentence = "{ \"index\" : { \"_index\" : \"test\", \"_type\" : \"t3\", \"_id\" : \"10000000\" } }\n" +
                 "{\"cf1\":\"0000008207\", \"cf2\":\"20170808023304\", \"cf3\":{\"c42\":{\"c4\":\"1100008207\"}, \"d1\":{\"c4\":\"1000004751\"}, \"c43\":\"chat\", \"d2\":\"c++\"}, \"cf4\":{\"c18\":\"466187329633641\", \"c19\":\"231899539124898\", \"c32\":\"92541820110\", \"c28\":\"202118428730\", \"c20\":\"1.5.2.8\", \"c50\":\"1100008207\"}, \"cf5\":\"5\", \"cf6\":\"t3\", \"cf7\":\"20170808\", \"cf8\":\"reg1\"}";
-        String[] str = tblcf1c18();
+        ExtractFromSentence extractFromSentence = new ExtractFromSentence(sentence);
+        String[] str = extractFromSentence.tblcf1c18();
         System.out.println("tblcf1c18:" + str[0] + "," + str[1]);
-        str = tblcf1c19();
+        str = extractFromSentence.tblcf1c19();
         System.out.println("tblcf1c19:" + str[0] + "," + str[1]);
-        str = tblcf1c28();
+        str = extractFromSentence.tblcf1c28();
         System.out.println("tblcf1c28:" + str[0] + "," + str[1]);
-        str = tblcf1c32();
+        str = extractFromSentence.tblcf1c32();
         System.out.println("tblcf1c32:" + str[0] + "," + str[1]);
-        str = tblcf1c39();
+        str = extractFromSentence.tblcf1c39();
         System.out.println("tblcf1c39:" + str[0] + "," + str[1]);
-        str = tblcf1c50();
+        str = extractFromSentence.tblcf1c50();
         System.out.println("tblcf1c50:" + str[0] + "," + str[1]);
     }
 
-    public static String matchCf1(String temp){
+    private String matchCf1(String temp){
         String reg = "\"cf1\":\"(\\d+)\"";
         Pattern p2 = Pattern.compile(reg);
         Matcher m2 = p2.matcher(temp);
@@ -43,8 +48,8 @@ public class ExtractFromSentence {
         }
     }
 
-    public static String[] tblcf1c18(){
-        String str = sentence;
+    public  String[] tblcf1c18(){
+        String str = this.sentence;
         String[] result = new String[2];
         String reg = "\"c18\":\"(\\d+)\"";
         Pattern p1 = Pattern.compile(reg);
@@ -60,8 +65,8 @@ public class ExtractFromSentence {
         return result;
     }
 
-    public static String[] tblcf1c19(){
-        String str = sentence;
+    public  String[] tblcf1c19(){
+        String str = this.sentence;
         String[] result = new String[2];
         String reg = "\"c19\":\"(\\d+)\"";
         Pattern p1 = Pattern.compile(reg);
@@ -77,8 +82,8 @@ public class ExtractFromSentence {
         return result;
     }
 
-    public static String[] tblcf1c28(){
-        String str = sentence;
+    public  String[] tblcf1c28(){
+        String str = this.sentence;
         String[] result = new String[2];
         String reg = "\"c28\":\"(\\d+)\"";
         Pattern p1 = Pattern.compile(reg);
@@ -93,8 +98,8 @@ public class ExtractFromSentence {
         }
         return result;
     }
-    public static String[] tblcf1c32(){
-        String str = sentence;
+    public  String[] tblcf1c32(){
+        String str = this.sentence;
         String[] result = new String[2];
         String reg = "\"c32\":\"(\\d+)\"";
         Pattern p1 = Pattern.compile(reg);
@@ -109,8 +114,8 @@ public class ExtractFromSentence {
         }
         return result;
     }
-    public static String[] tblcf1c39(){
-        String str = sentence;
+    public  String[] tblcf1c39(){
+        String str = this.sentence;
         String[] result = new String[2];
         String reg = "\"c39\":\"(\\d+)\"";
         Pattern p1 = Pattern.compile(reg);
@@ -125,8 +130,8 @@ public class ExtractFromSentence {
         }
         return result;
     }
-    public static String[] tblcf1c50(){
-        String str = sentence;
+    public  String[] tblcf1c50(){
+        String str = this.sentence;
         String[] result = new String[2];
         String reg = "\"c50\":\"(\\d+)\"";
         Pattern p1 = Pattern.compile(reg);
