@@ -33,6 +33,8 @@ public class IndexController {
 
     @Autowired
     private KafkaTemplate<Integer, String> kafkaTemplate;
+    @Autowired
+    private DefaultKafkaProducerFactory producerFactory;
 
     @ResponseBody
     @RequestMapping(value = "test", method = RequestMethod.GET)
@@ -57,7 +59,7 @@ public class IndexController {
     @RequestMapping(value = "test2", method = RequestMethod.GET)
     public String index2(@RequestParam("fileName") String fileName) {
         Map<String, Object> props = new HashMap<>();
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.152.45:9092");
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "172.16.247.100:9092");
         props.put(ProducerConfig.RETRIES_CONFIG, 0);
         props.put(ProducerConfig.BATCH_SIZE_CONFIG, 16384);
         props.put(ProducerConfig.LINGER_MS_CONFIG, 1);
@@ -66,6 +68,27 @@ public class IndexController {
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         ProducerFactory<Integer, String> pf = new DefaultKafkaProducerFactory<Integer, String>(props);
         KafkaTemplate<Integer, String> template = new KafkaTemplate<>(pf);
+        File file = new File(fileName);
+        //File file = new File("/root/tmp_data/fakeData/data20171024/FakeData_t3.txt");
+        System.out.println("start: producer" + new DateTime(System.currentTimeMillis()));
+        try {
+            LineIterator it = FileUtils.lineIterator(file, "UTF-8");
+            while (it.hasNext()) {
+                String lineTxt = it.nextLine();
+                template.send("topic7", lineTxt);
+            }
+            System.out.println("end: producer" + new DateTime(System.currentTimeMillis()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "ok";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "test3", method = RequestMethod.GET)
+    public String index3(@RequestParam("fileName") String fileName) {
+
+        KafkaTemplate<Integer, String> template = new KafkaTemplate<>(producerFactory);
         File file = new File(fileName);
         //File file = new File("/root/tmp_data/fakeData/data20171024/FakeData_t3.txt");
         System.out.println("start: producer" + new DateTime(System.currentTimeMillis()));
