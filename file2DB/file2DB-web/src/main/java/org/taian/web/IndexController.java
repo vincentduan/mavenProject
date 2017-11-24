@@ -20,6 +20,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 /**
  * Created with IntelliJ IDEA.
@@ -46,7 +47,8 @@ public class IndexController {
             LineIterator it = FileUtils.lineIterator(file, "UTF-8");
             while (it.hasNext()) {
                 String lineTxt = it.nextLine();
-                kafkaTemplate.send("topic6", lineTxt);
+                //kafkaTemplate.send("topic6", lineTxt);
+                kafkaTemplate.send("topic6", new Random().nextInt(20),null,lineTxt);
             }
             System.out.println("end: producer" + new DateTime(System.currentTimeMillis()));
         } catch (IOException e) {
@@ -70,14 +72,14 @@ public class IndexController {
         KafkaTemplate<Integer, String> template = new KafkaTemplate<>(pf);
         File file = new File(fileName);
         //File file = new File("/root/tmp_data/fakeData/data20171024/FakeData_t3.txt");
-        System.out.println("start: producer" + new DateTime(System.currentTimeMillis()));
+        System.out.println("start: producer" + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
         try {
             LineIterator it = FileUtils.lineIterator(file, "UTF-8");
             while (it.hasNext()) {
                 String lineTxt = it.nextLine();
                 template.send("topic7", lineTxt);
             }
-            System.out.println("end: producer" + new DateTime(System.currentTimeMillis()));
+            System.out.println("end: producer" + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
         } catch (Exception e) {
             e.printStackTrace();
         }*/
@@ -91,14 +93,14 @@ public class IndexController {
         /*KafkaTemplate<Integer, String> template = new KafkaTemplate<>(producerFactory);
         File file = new File(fileName);
         //File file = new File("/root/tmp_data/fakeData/data20171024/FakeData_t3.txt");
-        System.out.println("start: producer" + new DateTime(System.currentTimeMillis()));
+        System.out.println("start: producer" + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
         try {
             LineIterator it = FileUtils.lineIterator(file, "UTF-8");
             while (it.hasNext()) {
                 String lineTxt = it.nextLine();
                 template.send("topic7", lineTxt);
             }
-            System.out.println("end: producer" + new DateTime(System.currentTimeMillis()));
+            System.out.println("end: producer" + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
         } catch (Exception e) {
             e.printStackTrace();
         }*/

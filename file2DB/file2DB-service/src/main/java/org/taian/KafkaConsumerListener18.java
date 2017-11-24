@@ -38,10 +38,10 @@ public class KafkaConsumerListener18 implements ConsumerAwareMessageListener<Int
     @Override
     public void onMessage(ConsumerRecord<Integer, String> record, Consumer<?, ?> consumer) {
         if((record.value().toString()).equals("start")){
-            System.out.println("start: " + new DateTime(System.currentTimeMillis()));
+            logger.info("start: " + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
         }
         if ((record.value().toString()).equals("end")) {
-            System.out.println("end: " + new DateTime(System.currentTimeMillis()));
+            logger.info("end: " + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
         }
 
         //System.out.println("consumer id: "+consumer);

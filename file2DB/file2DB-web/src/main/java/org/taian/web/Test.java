@@ -35,14 +35,14 @@ public class Test {
         String fileName = "D:/test/ddy.txt";
         File file = new File(fileName);
         //File file = new File("/root/tmp_data/fakeData/data20171024/FakeData_t3.txt");
-        System.out.println("start: producer" + new DateTime(System.currentTimeMillis()));
+        System.out.println("start: producer" + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
         try {
             LineIterator it = FileUtils.lineIterator(file, "UTF-8");
             while (it.hasNext()) {
                 String lineTxt = it.nextLine();
                 template.send("topic7", lineTxt);
             }
-            System.out.println("end: producer" + new DateTime(System.currentTimeMillis()));
+            System.out.println("end: producer" + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
         }catch (Exception e){
             e.printStackTrace();
         }
