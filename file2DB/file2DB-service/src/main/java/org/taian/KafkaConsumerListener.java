@@ -39,6 +39,7 @@ public class KafkaConsumerListener implements ConsumerAwareMessageListener<Integ
 
     @Override
     public void onMessage(ConsumerRecord<Integer, String> record, Consumer<?, ?> consumer) {
+        //System.out.println(record.value().toString());
         if((record.value().toString()).equals("start")){
             System.out.println("start: " + new DateTime(System.currentTimeMillis()));
         }
@@ -47,13 +48,13 @@ public class KafkaConsumerListener implements ConsumerAwareMessageListener<Integ
         }
 
         //System.out.println("consumer id: "+consumer);
-        /*ExtractFromSentence extractFromSentence = new ExtractFromSentence(record.value());
+        ExtractFromSentence extractFromSentence = new ExtractFromSentence(record.value());
         String[] cf1c18 = extractFromSentence.tblcf1c18();
         String[] cf1c19 = extractFromSentence.tblcf1c19();
         String[] cf1c28 = extractFromSentence.tblcf1c28();
         String[] cf1c32 = extractFromSentence.tblcf1c32();
         String[] cf1c39 = extractFromSentence.tblcf1c39();
-        String[] cf1c50 = extractFromSentence.tblcf1c50();*/
+        String[] cf1c50 = extractFromSentence.tblcf1c50();
 
         /*try {
             if(cf1c18[0] != null){
@@ -90,7 +91,8 @@ public class KafkaConsumerListener implements ConsumerAwareMessageListener<Integ
                 }
             });
         }*/
-        /*if (cf1c18[0] != null) {
+
+        if (cf1c18[0] != null) {
             String c18 = extractService.tblcf1c18ForOne(cf1c18);
         }
         if (cf1c19[0] != null) {
@@ -115,7 +117,7 @@ public class KafkaConsumerListener implements ConsumerAwareMessageListener<Integ
         }
         if (cf1c50[0] != null) {
             String c50 = extractService.tblcf1c50ForOne(cf1c50);
-        }*/
+        }
 
     }
 

@@ -33,8 +33,8 @@ public class IndexController {
 
     @Autowired
     private KafkaTemplate<Integer, String> kafkaTemplate;
-    @Autowired
-    private DefaultKafkaProducerFactory producerFactory;
+   /* @Autowired
+    private DefaultKafkaProducerFactory producerFactory;*/
 
     @ResponseBody
     @RequestMapping(value = "test", method = RequestMethod.GET)
@@ -46,7 +46,7 @@ public class IndexController {
             LineIterator it = FileUtils.lineIterator(file, "UTF-8");
             while (it.hasNext()) {
                 String lineTxt = it.nextLine();
-                kafkaTemplate.send("topic7", lineTxt);
+                kafkaTemplate.send("topic6", lineTxt);
             }
             System.out.println("end: producer" + new DateTime(System.currentTimeMillis()));
         } catch (IOException e) {
@@ -58,7 +58,7 @@ public class IndexController {
     @ResponseBody
     @RequestMapping(value = "test2", method = RequestMethod.GET)
     public String index2(@RequestParam("fileName") String fileName) {
-        Map<String, Object> props = new HashMap<>();
+        /*Map<String, Object> props = new HashMap<>();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "172.16.247.100:9092");
         props.put(ProducerConfig.RETRIES_CONFIG, 0);
         props.put(ProducerConfig.BATCH_SIZE_CONFIG, 16384);
@@ -80,7 +80,7 @@ public class IndexController {
             System.out.println("end: producer" + new DateTime(System.currentTimeMillis()));
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
         return "ok";
     }
 
@@ -88,7 +88,7 @@ public class IndexController {
     @RequestMapping(value = "test3", method = RequestMethod.GET)
     public String index3(@RequestParam("fileName") String fileName) {
 
-        KafkaTemplate<Integer, String> template = new KafkaTemplate<>(producerFactory);
+        /*KafkaTemplate<Integer, String> template = new KafkaTemplate<>(producerFactory);
         File file = new File(fileName);
         //File file = new File("/root/tmp_data/fakeData/data20171024/FakeData_t3.txt");
         System.out.println("start: producer" + new DateTime(System.currentTimeMillis()));
@@ -101,7 +101,7 @@ public class IndexController {
             System.out.println("end: producer" + new DateTime(System.currentTimeMillis()));
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
         return "ok";
     }
 
