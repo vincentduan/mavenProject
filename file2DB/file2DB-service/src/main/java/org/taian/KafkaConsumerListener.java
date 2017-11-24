@@ -4,6 +4,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.ExtractUtils.ExtractFromSentence;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.common.PartitionInfo;
 import org.joda.time.DateTime;
 import org.service.ExtractService;
 import org.slf4j.Logger;
