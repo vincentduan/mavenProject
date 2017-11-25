@@ -47,7 +47,7 @@ public class IndexController {
             LineIterator it = FileUtils.lineIterator(file, "UTF-8");
             while (it.hasNext()) {
                 String lineTxt = it.nextLine();
-                //kafkaTemplate.send("topic6", lineTxt);
+//                kafkaTemplate.send("topic6", lineTxt);
                 kafkaTemplate.send("topic6", new Random().nextInt(20),null,lineTxt);
             }
             System.out.println("end: producer" + new DateTime(System.currentTimeMillis()));

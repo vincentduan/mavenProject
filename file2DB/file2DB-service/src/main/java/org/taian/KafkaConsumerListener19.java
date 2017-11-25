@@ -102,14 +102,7 @@ public class KafkaConsumerListener19 implements ConsumerAwareMessageListener<Int
         }
         if (cf1c39[0] != null) {
             String c39 = extractService.tblcf1c39ForOne(cf1c39);
-            try {
-                System.out.println("总连接数:" + dataSource.getNumConnections());
-                System.out.println("最大连接池数:" + dataSource.getMaxPoolSize());
-                System.out.println("正在使用连接数:"+dataSource.getNumBusyConnections());
-                System.out.println("空闲连接数:"+dataSource.getNumIdleConnections());
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+
         }
         if (cf1c50[0] != null) {
             String c50 = extractService.tblcf1c50ForOne(cf1c50);
