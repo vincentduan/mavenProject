@@ -13,6 +13,7 @@ import org.springframework.kafka.listener.ConsumerAwareMessageListener;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;
@@ -26,8 +27,7 @@ public class KafkaConsumerListener12 implements ConsumerAwareMessageListener<Int
     @Autowired
     ComboPooledDataSource dataSource;
 
-    List<String[]> cf1c18_list = new ArrayList<>();
-    List<String[]> cf1c19_list = new ArrayList<>();
+    List<String> list = new ArrayList<>();
     ExecutorService executorService = Executors.newFixedThreadPool(10);
 
     ArrayBlockingQueue<String[]> arrayBlockingQueue_cf1c18 = new ArrayBlockingQueue<>(10);
@@ -37,21 +37,28 @@ public class KafkaConsumerListener12 implements ConsumerAwareMessageListener<Int
 
     @Override
     public void onMessage(ConsumerRecord<Integer, String> record, Consumer<?, ?> consumer) {
-        if((record.value().toString()).equals("start")){
+        if ("start".equals(record.value().toString())) {
             logger.info("start: " + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
         }
-        if ((record.value().toString()).equals("end")) {
+        if ("end".equals(record.value().toString())) {
             logger.info("end: " + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
         }
-
+        list.add(record.value().toString());
+        if (list.size() == 1000 || "ThisFileEnd".equals(record.value().toString())) {
+            if("ThisFileEnd".equals(record.value().toString())){
+                logger.info("consumer:"+ consumer +","+"endFile");
+            }
+            HandleListUtils handleList = new HandleListUtils();
+            handleList.handleList(list, extractService);
+        }
         //System.out.println("consumer id: "+consumer);
-        ExtractFromSentence extractFromSentence = new ExtractFromSentence(record.value());
+        /*ExtractFromSentence extractFromSentence = new ExtractFromSentence(record.value());
         String[] cf1c18 = extractFromSentence.tblcf1c18();
         String[] cf1c19 = extractFromSentence.tblcf1c19();
         String[] cf1c28 = extractFromSentence.tblcf1c28();
         String[] cf1c32 = extractFromSentence.tblcf1c32();
         String[] cf1c39 = extractFromSentence.tblcf1c39();
-        String[] cf1c50 = extractFromSentence.tblcf1c50();
+        String[] cf1c50 = extractFromSentence.tblcf1c50();*/
 
         /*try {
             if(cf1c18[0] != null){
@@ -88,7 +95,7 @@ public class KafkaConsumerListener12 implements ConsumerAwareMessageListener<Int
                 }
             });
         }*/
-        if (cf1c18[0] != null) {
+        /*if (cf1c18[0] != null) {
             String c18 = extractService.tblcf1c18ForOne(cf1c18);
         }
         if (cf1c19[0] != null) {
@@ -106,7 +113,7 @@ public class KafkaConsumerListener12 implements ConsumerAwareMessageListener<Int
         }
         if (cf1c50[0] != null) {
             String c50 = extractService.tblcf1c50ForOne(cf1c50);
-        }
+        }*/
 
     }
 

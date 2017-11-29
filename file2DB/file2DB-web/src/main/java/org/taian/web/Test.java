@@ -11,8 +11,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
 
 import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -47,5 +46,17 @@ public class Test {
             e.printStackTrace();
         }
 */
+
+        String s = "0000009388";
+        String s2 = "0000009389";
+        String s3 = "0000009387";
+        List<String> l = new ArrayList<>();
+        l.add(s);
+        l.add(s2);
+        l.add(s3);
+        //Collections.sort(l, (o1, o2) -> o1.compareTo(o2));
+        Collections.sort(l, Comparator.comparing(o -> o));
+        System.out.println(l);
+        System.out.println(Integer.parseInt(s)%20);
     }
 }

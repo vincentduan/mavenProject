@@ -18,6 +18,34 @@
         </foreach>
     </select>
 
+    <select id="updateMysqlPerCf1C28" parameterType="java.util.List">
+        insert ignore into tbl_per_cf1_c28 (cf1, c28) values
+        <foreach collection="list" index="index" item="item" separator=",">
+            ('${item[0]}', '${item[1]}')
+        </foreach>
+    </select>
+
+    <select id="updateMysqlPerCf1C32" parameterType="java.util.List">
+        insert ignore into tbl_per_cf1_c32 (cf1, c32) values
+        <foreach collection="list" index="index" item="item" separator=",">
+            ('${item[0]}', '${item[1]}')
+        </foreach>
+    </select>
+
+    <select id="updateMysqlPerCf1C39" parameterType="java.util.List">
+        insert ignore into tbl_per_cf1_c39 (cf1, c39) values
+        <foreach collection="list" index="index" item="item" separator=",">
+            ('${item[0]}', '${item[1]}')
+        </foreach>
+    </select>
+
+    <select id="updateMysqlPerCf1C50" parameterType="java.util.List">
+        insert ignore into tbl_per_cf1_c50 (cf1, c50) values
+        <foreach collection="list" index="index" item="item" separator=",">
+            ('${item[0]}', '${item[1]}')
+        </foreach>
+    </select>
+
     <select id="updateMysqlPerCf1C18ForOne">
         insert ignore into tbl_per_cf1_c18 (cf1, c18) values
             ('${item[0]}', '${item[1]}')

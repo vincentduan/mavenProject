@@ -36,7 +36,7 @@ public class ExtractFromSentence {
         System.out.println("tblcf1c50:" + str[0] + "," + str[1]);
     }
 
-    private String matchCf1(String temp){
+    public String matchCf1(String temp){
         String reg = "\"cf1\":\"(\\d+)\"";
         Pattern p2 = Pattern.compile(reg);
         Matcher m2 = p2.matcher(temp);

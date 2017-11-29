@@ -1,11 +1,14 @@
 package org.taian.web;
 
+import org.ExtractUtils.ExtractFromSentence;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.LineIterator;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.IntegerSerializer;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.joda.time.DateTime;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -15,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.taian.KafkaConsumerListener;
 
 import java.io.File;
 import java.io.IOException;
@@ -37,19 +41,32 @@ public class IndexController {
    /* @Autowired
     private DefaultKafkaProducerFactory producerFactory;*/
 
+    private static final Logger logger = LoggerFactory.getLogger(KafkaConsumerListener.class);
+
     @ResponseBody
     @RequestMapping(value = "test", method = RequestMethod.GET)
     public String index(@RequestParam("fileName") String fileName) {
         File file = new File(fileName);
         //File file = new File("/root/tmp_data/fakeData/data20171024/FakeData_t3.txt");
+        logger.info("start: producer" + new DateTime(System.currentTimeMillis()));
         System.out.println("start: producer" + new DateTime(System.currentTimeMillis()));
         try {
             LineIterator it = FileUtils.lineIterator(file, "UTF-8");
             while (it.hasNext()) {
                 String lineTxt = it.nextLine();
 //                kafkaTemplate.send("topic6", lineTxt);
-                kafkaTemplate.send("topic6", new Random().nextInt(20),null,lineTxt);
+                ExtractFromSentence extractFromSentence = new ExtractFromSentence(lineTxt);
+                String cf1 = extractFromSentence.matchCf1(lineTxt);
+                if(!"".equals(cf1)){
+                    //logger.info("cf1:"+cf1+","+Integer.parseInt(cf1)%20);
+                    //kafkaTemplate.send("topic-"+Integer.parseInt(cf1)%20, lineTxt);
+                    kafkaTemplate.send("topic-"+(new Random().nextInt(20)), lineTxt);
+                }
             }
+            for(int i = 0; i<20 ;i++){
+                kafkaTemplate.send("topic-"+i, "ThisFileEnd");
+            }
+            logger.info("end: producer" + new DateTime(System.currentTimeMillis()));
             System.out.println("end: producer" + new DateTime(System.currentTimeMillis()));
         } catch (IOException e) {
             e.printStackTrace();
@@ -88,8 +105,7 @@ public class IndexController {
 
     @ResponseBody
     @RequestMapping(value = "test3", method = RequestMethod.GET)
-    public String index3(@RequestParam("fileName") String fileName) {
-
+    public String index3() {
         /*KafkaTemplate<Integer, String> template = new KafkaTemplate<>(producerFactory);
         File file = new File(fileName);
         //File file = new File("/root/tmp_data/fakeData/data20171024/FakeData_t3.txt");

@@ -19,17 +19,39 @@ public class ExtractServiceImpl implements ExtractService {
     @Autowired
     ExtractDao extractDao;
 
+    @Override
     public String tblcf1c18(List<String[]> list){
-
         extractDao.updateMysqlPerCf1C18(list);
-        System.out.println("tblcf1c18 ");
         return "";
     }
 
     @Override
     public String tblcf1c19(List<String[]> list) {
         extractDao.updateMysqlPerCf1C19(list);
-        System.out.println("tblcf1c19 ");
+        return null;
+    }
+
+    @Override
+    public String tblcf1c28(List<String[]> cf1c28_list) {
+        extractDao.updateMysqlPerCf1C28(cf1c28_list);
+        return null;
+    }
+
+    @Override
+    public String tblcf1c32(List<String[]> cf1c32_list) {
+        extractDao.updateMysqlPerCf1C32(cf1c32_list);
+        return null;
+    }
+
+    @Override
+    public String tblcf1c39(List<String[]> cf1c39_list) {
+        extractDao.updateMysqlPerCf1C39(cf1c39_list);
+        return null;
+    }
+
+    @Override
+    public String tblcf1c50(List<String[]> cf1c50_list) {
+        extractDao.updateMysqlPerCf1C50(cf1c50_list);
         return null;
     }
 
