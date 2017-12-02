@@ -59,8 +59,8 @@ public class IndexController {
                 String cf1 = extractFromSentence.matchCf1(lineTxt);
                 if(!"".equals(cf1)){
                     //logger.info("cf1:"+cf1+","+Integer.parseInt(cf1)%20);
-                    //kafkaTemplate.send("topic-"+Integer.parseInt(cf1)%20, lineTxt);
-                    kafkaTemplate.send("topic-"+(new Random().nextInt(20)), lineTxt);
+                    kafkaTemplate.send("topic-"+Integer.parseInt(cf1)%20, lineTxt);
+                    //kafkaTemplate.send("topic-"+(new Random().nextInt(20)), lineTxt);
                 }
             }
             for(int i = 0; i<20 ;i++){
@@ -77,8 +77,8 @@ public class IndexController {
     @ResponseBody
     @RequestMapping(value = "test2", method = RequestMethod.GET)
     public String index2(@RequestParam("fileName") String fileName) {
-        /*Map<String, Object> props = new HashMap<>();
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "172.16.247.100:9092");
+        Map<String, Object> props = new HashMap<>();
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.152.45:9092");
         props.put(ProducerConfig.RETRIES_CONFIG, 0);
         props.put(ProducerConfig.BATCH_SIZE_CONFIG, 16384);
         props.put(ProducerConfig.LINGER_MS_CONFIG, 1);
@@ -89,17 +89,23 @@ public class IndexController {
         KafkaTemplate<Integer, String> template = new KafkaTemplate<>(pf);
         File file = new File(fileName);
         //File file = new File("/root/tmp_data/fakeData/data20171024/FakeData_t3.txt");
-        System.out.println("start: producer" + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
+        logger.info("start: producer" + new DateTime(System.currentTimeMillis()));
+        System.out.println("start: producer" + new DateTime(System.currentTimeMillis()) );
         try {
             LineIterator it = FileUtils.lineIterator(file, "UTF-8");
             while (it.hasNext()) {
                 String lineTxt = it.nextLine();
-                template.send("topic7", lineTxt);
+                ExtractFromSentence extractFromSentence = new ExtractFromSentence(lineTxt);
+                String cf1 = extractFromSentence.matchCf1(lineTxt);
+                if(!"".equals(cf1)){
+                    template.send("topic-"+Integer.parseInt(cf1)%20, lineTxt);
+                }
             }
-            System.out.println("end: producer" + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
+            logger.info("end: producer" + new DateTime(System.currentTimeMillis()));
+            System.out.println("end: producer" + new DateTime(System.currentTimeMillis()) );
         } catch (Exception e) {
             e.printStackTrace();
-        }*/
+        }
         return "ok";
     }
 

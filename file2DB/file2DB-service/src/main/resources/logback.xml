@@ -6,13 +6,11 @@
 			<level>DEBUG</level>
 		</filter>
         <file>./log/file2DB-debug.log</file>
-		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
-			<MaxFileSize>50MB</MaxFileSize>
-		</triggeringPolicy>
+        <append>true</append>
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n</Pattern>
 		</layout>
-	</appender>-->
+	</appender>
 	<appender name="all_info_onefile" class="ch.qos.logback.core.FileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
 			<level>INFO</level>
@@ -24,10 +22,47 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n</Pattern>
 		</layout>
-	</appender>
-	
+	</appender>-->
+    <appender name="FILE-DEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>./log/logFile-debug.log</file>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>logFile-debug.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>1</maxHistory>
+            <totalSizeCap>30MB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="FILE-INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>./log/logFile-info.log</file>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>logFile-info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>1</maxHistory>
+            <totalSizeCap>30MB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="org.apache.kafka" level="ERROR"/>
+    <logger name="org.springframework.kafka" level="ERROR"/>
 	<root>
-		<!--<appender-ref ref="all_debug_onefile" />-->
-		<appender-ref ref="all_info_onefile" />
+		<!--<appender-ref ref="all_debug_onefile" />
+		<appender-ref ref="all_info_onefile" />-->
+        <appender-ref ref="FILE-INFO" />
+        <appender-ref ref="FILE-DEBUG" />
 	</root>
 </configuration> 

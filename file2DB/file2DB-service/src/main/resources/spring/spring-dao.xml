@@ -4,8 +4,6 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
-
 	<!-- 2.数据库连接池 -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<!-- 配置连接池属性 -->
@@ -14,14 +12,17 @@
         <property name="user" value="${username}"/>
         <property name="password" value="${password}"/>
 		<!-- c3p0连接池的私有属性 -->
-		<property name="maxPoolSize" value="30" />
-		<property name="minPoolSize" value="20" />
-		<!-- 关闭连接后不自动commit -->
+		<property name="maxPoolSize" value="60" />
+		<property name="minPoolSize" value="0" />
+		<property name="initialPoolSize" value="0"/>
+		<!-- 关闭连接后不自动commit ，连接关闭时默认将所有未提交的操作回滚。Default: false-->
 		<property name="autoCommitOnClose" value="false" />
 		<!-- 获取连接超时时间 -->
 		<property name="checkoutTimeout" value="1000" />
 		<!-- 当获取连接失败重试次数 -->
 		<property name="acquireRetryAttempts" value="2" />
+        <!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
+        <property name="acquireIncrement" value="5" />
 	</bean>
 	<!-- 约定大于配置 -->
 	<!-- 3：配置SQLSessionFactory对象 -->
