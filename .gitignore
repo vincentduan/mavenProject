@@ -9,6 +9,7 @@ vincent-kafka/vincent-kafka.iml
 
 file2DB/.idea/
 file2DB/logs/
+file2DB/log/
 file2DB/file2DB.iml
 file2DB/file2DB-service/target/
 file2DB/file2DB-service/logs/

@@ -24,7 +24,7 @@
 		</layout>
 	</appender>-->
     <appender name="FILE-DEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>./log/logFile-debug.log</file>
+        <!--<file>./log/logFile-debug.log</file>-->
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>DEBUG</level>
             <onMatch>ACCEPT</onMatch>
@@ -32,16 +32,16 @@
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- daily rollover -->
-            <fileNamePattern>logFile-debug.%d{yyyy-MM-dd}.log</fileNamePattern>
-            <maxHistory>1</maxHistory>
-            <totalSizeCap>30MB</totalSizeCap>
+            <fileNamePattern>./log/logFile-debug.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>3</maxHistory>
+            <totalSizeCap>50MB</totalSizeCap>
         </rollingPolicy>
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n</pattern>
         </encoder>
     </appender>
     <appender name="FILE-INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>./log/logFile-info.log</file>
+        <!--<file>./log/logFile-info.log</file>-->
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>INFO</level>
             <onMatch>ACCEPT</onMatch>
@@ -49,9 +49,9 @@
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- daily rollover -->
-            <fileNamePattern>logFile-info.%d{yyyy-MM-dd}.log</fileNamePattern>
-            <maxHistory>1</maxHistory>
-            <totalSizeCap>30MB</totalSizeCap>
+            <fileNamePattern>./log/logFile-info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>3</maxHistory>
+            <totalSizeCap>50MB</totalSizeCap>
         </rollingPolicy>
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n</pattern>

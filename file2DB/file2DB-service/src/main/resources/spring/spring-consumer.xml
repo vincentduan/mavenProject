@@ -6,7 +6,7 @@
 
 
     <!-- 定义consumer的参数 -->
-    <bean id="consumer1" class="java.util.HashMap">
+    <bean id="consumer" class="java.util.HashMap">
         <constructor-arg>
             <map>
                 <entry key="bootstrap.servers" value="${bootstrap.servers}" />
@@ -26,108 +26,108 @@
     <!-- 创建consumerFactory bean -->
     <bean id="consumerFactory1" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory2" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory3" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory4" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory5" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory6" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory7" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory8" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory9" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory10" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory11" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory12" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory13" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory14" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory15" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory16" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory17" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory18" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory19" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     <bean id="consumerFactory20" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
         <constructor-arg>
-            <ref bean="consumer1" />
+            <ref bean="consumer" />
         </constructor-arg>
     </bean>
     
 
     <!-- 实际执行消息消费的类 -->
-    <bean id="messageListernerConsumerService" class="org.taian.KafkaConsumerListener" />
+    <bean id="messageListernerConsumerService1" class="org.taian.KafkaConsumerListener1" />
     <bean id="messageListernerConsumerService2" class="org.taian.KafkaConsumerListener2" />
     <bean id="messageListernerConsumerService3" class="org.taian.KafkaConsumerListener3" />
     <bean id="messageListernerConsumerService4" class="org.taian.KafkaConsumerListener4" />
@@ -151,7 +151,7 @@
     <!-- 消费者容器配置信息 -->
     <bean id="containerProperties1" class="org.springframework.kafka.listener.config.ContainerProperties">
         <constructor-arg value="topic-0" />
-        <property name="messageListener" ref="messageListernerConsumerService" />
+        <property name="messageListener" ref="messageListernerConsumerService1" />
     </bean>
     <bean id="containerProperties2" class="org.springframework.kafka.listener.config.ContainerProperties">
         <constructor-arg value="topic-1" />

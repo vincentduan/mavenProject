@@ -18,13 +18,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.taian.KafkaConsumerListener;
+import org.taian.KafkaConsumerListener1;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 /**
  * Created with IntelliJ IDEA.
@@ -41,7 +40,7 @@ public class IndexController {
    /* @Autowired
     private DefaultKafkaProducerFactory producerFactory;*/
 
-    private static final Logger logger = LoggerFactory.getLogger(KafkaConsumerListener.class);
+    private static final Logger logger = LoggerFactory.getLogger(KafkaConsumerListener1.class);
 
     @ResponseBody
     @RequestMapping(value = "test", method = RequestMethod.GET)

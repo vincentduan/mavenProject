@@ -15,6 +15,8 @@
 		<property name="maxPoolSize" value="60" />
 		<property name="minPoolSize" value="0" />
 		<property name="initialPoolSize" value="0"/>
+		<!--最大空闲时间,60秒内未使用则连接被丢弃。若为0则永不丢弃。Default: 0 -->
+		<!--<property name="maxIdleTime" value="5" />-->
 		<!-- 关闭连接后不自动commit ，连接关闭时默认将所有未提交的操作回滚。Default: false-->
 		<property name="autoCommitOnClose" value="false" />
 		<!-- 获取连接超时时间 -->

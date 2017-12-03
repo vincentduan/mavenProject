@@ -1,28 +1,21 @@
 package org.taian;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import org.ExtractUtils.ExtractFromSentence;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.common.PartitionInfo;
-import org.joda.time.DateTime;
 import org.service.ExtractService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.listener.ConsumerAwareMessageListener;
-import org.springframework.kafka.listener.MessageListener;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 
-public class KafkaConsumerListener implements ConsumerAwareMessageListener<Integer, String> {
+public class KafkaConsumerListener1 implements ConsumerAwareMessageListener<Integer, String> {
 
     @Autowired
     ExtractService extractService;
@@ -36,25 +29,21 @@ public class KafkaConsumerListener implements ConsumerAwareMessageListener<Integ
     ArrayBlockingQueue<String[]> arrayBlockingQueue_cf1c18 = new ArrayBlockingQueue<>(10);
     ArrayBlockingQueue<String[]> arrayBlockingQueue_cf1c19 = new ArrayBlockingQueue<>(10);
 
-    private static final Logger logger = LoggerFactory.getLogger(KafkaConsumerListener.class);
+    private static final Logger logger = LoggerFactory.getLogger(KafkaConsumerListener1.class);
 
     @Override
     public void onMessage(ConsumerRecord<Integer, String> record, Consumer<?, ?> consumer) {
         //System.out.println(record.value().toString());
-        if ("start".equals(record.value().toString())) {
-            logger.info("start: " + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
-        }
-        if ("end".equals(record.value().toString())) {
-            logger.info("end: " + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
-        }
 
+        //logger.info(record.toString());//System.out.println(record.toString());
         list.add(record.value().toString());
-        if (list.size() == 1000 || "ThisFileEnd".equals(record.value().toString())) {
-            if("ThisFileEnd".equals(record.value().toString())){
+        if (list.size() == 10 || "ThisFileEnd".equals(record.value().toString())) {
+            /*if("ThisFileEnd".equals(record.value().toString())){
                 logger.info("consumer:"+ consumer +","+"endFile");
-            }
+            } */
             HandleListUtils handleList = new HandleListUtils();
             handleList.handleList(list, extractService);
+            list.clear();
         }
 
         /*ExtractFromSentence extractFromSentence = new ExtractFromSentence(record.value());

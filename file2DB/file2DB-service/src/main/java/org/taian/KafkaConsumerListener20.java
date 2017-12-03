@@ -37,19 +37,16 @@ public class KafkaConsumerListener20 implements ConsumerAwareMessageListener<Int
 
     @Override
     public void onMessage(ConsumerRecord<Integer, String> record, Consumer<?, ?> consumer) {
-        if ("start".equals(record.value().toString())) {
-            logger.info("start: " + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
-        }
-        if ("end".equals(record.value().toString())) {
-            logger.info("end: " + new DateTime(System.currentTimeMillis()) + "id:" + record.offset());
-        }
+
+        //logger.info(record.toString());//System.out.println(record.toString());
         list.add(record.value().toString());
-        if (list.size() == 1000 || "ThisFileEnd".equals(record.value().toString())) {
-            if("ThisFileEnd".equals(record.value().toString())){
+        if (list.size() == 10 || "ThisFileEnd".equals(record.value().toString())) {
+            /*if("ThisFileEnd".equals(record.value().toString())){
                 logger.info("consumer:"+ consumer +","+"endFile");
-            }
+            } */
             HandleListUtils handleList = new HandleListUtils();
             handleList.handleList(list, extractService);
+            list.clear();
         }
         //System.out.println("consumer id: "+consumer);
         /*ExtractFromSentence extractFromSentence = new ExtractFromSentence(record.value());
