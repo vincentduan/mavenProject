@@ -40,7 +40,7 @@ public class KafkaConsumerListener2 implements ConsumerAwareMessageListener<Inte
 
         //logger.info(record.toString());//System.out.println(record.toString());
         list.add(record.value().toString());
-        if (list.size() == 10 || "ThisFileEnd".equals(record.value().toString())) {
+        if (list.size() == 1000 || "ThisFileEnd".equals(record.value().toString())) {
             /*if("ThisFileEnd".equals(record.value().toString())){
                 logger.info("consumer:"+ consumer +","+"endFile");
             } */
