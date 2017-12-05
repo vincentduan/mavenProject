@@ -59,7 +59,7 @@ public class HandleListUtils {
         }
         if(cf1c18_list.size()>0){
             Collections.sort(cf1c18_list, Comparator.comparing(o -> o[0]));
-            cf1c18_list.forEach(l->logger.info(l[0]+":"+l[1]));
+            //cf1c18_list.forEach(l->logger.info(l[0]+":"+l[1]));
             extractService.tblcf1c18(cf1c18_list);
             //logger.info("c18 1000===============");
         }

@@ -28,7 +28,7 @@ public class KafkaConsumerListener7 implements ConsumerAwareMessageListener<Inte
     ComboPooledDataSource dataSource;
 
     List<String> list = new ArrayList<>();
-    ExecutorService executorService = Executors.newFixedThreadPool(10);
+
 
     ArrayBlockingQueue<String[]> arrayBlockingQueue_cf1c18 = new ArrayBlockingQueue<>(10);
     ArrayBlockingQueue<String[]> arrayBlockingQueue_cf1c19 = new ArrayBlockingQueue<>(10);
@@ -41,9 +41,9 @@ public class KafkaConsumerListener7 implements ConsumerAwareMessageListener<Inte
         //logger.info(record.toString());//System.out.println(record.toString());
         list.add(record.value().toString());
         if (list.size() == 1000 || "ThisFileEnd".equals(record.value().toString())) {
-            /*if("ThisFileEnd".equals(record.value().toString())){
+           if("ThisFileEnd".equals(record.value().toString())){
                 logger.info("consumer:"+ consumer +","+"endFile");
-            } */
+            }
             HandleListUtils handleList = new HandleListUtils();
             handleList.handleList(list, extractService);
             list.clear();
