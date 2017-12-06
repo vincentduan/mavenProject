@@ -7,7 +7,6 @@ public interface ScheduleJobService {
 
     ScheduleJobEntity queryObject(Long jobId);
 
-	@Transactional
 	void run(Long... jobIds);
 
     void save(ScheduleJobEntity scheduleJob);

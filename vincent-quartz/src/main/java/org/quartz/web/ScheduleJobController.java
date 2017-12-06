@@ -29,13 +29,12 @@ public class ScheduleJobController {
             scheduleJobEntity.setBean_Name("testTask");
             scheduleJobEntity.setMethod_Name("test");
             scheduleJobEntity.setParams("res");
-            scheduleJobEntity.setCron_Expression("0 0/1 * * * ?");
+            scheduleJobEntity.setCron_Expression("0/5 * * * * ?");
             scheduleJobEntity.setStatus(0);
 			scheduleJobService.save(scheduleJobEntity);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		return "ok";
 	}
 
@@ -51,7 +50,7 @@ public class ScheduleJobController {
 	@ResponseBody
 	@RequestMapping(value = { "run" }, method = { RequestMethod.GET, RequestMethod.POST })
 	public String run(String jobIds) {
-        scheduleJobService.run(Long.parseLong(jobIds));
+        scheduleJobService.run(Long.parseLong("1"));
 		return "ok";
 	}
 	

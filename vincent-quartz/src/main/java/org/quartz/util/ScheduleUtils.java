@@ -3,6 +3,9 @@ package org.quartz.util;
 
 import org.quartz.*;
 import org.quartz.domain.ScheduleJobEntity;
+import org.quartz.service.ScheduleJobServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 定时任务工具类
@@ -12,8 +15,11 @@ import org.quartz.domain.ScheduleJobEntity;
  * @date 2016年11月30日 下午12:44:59
  */
 public class ScheduleUtils {
+
+    Logger logger = LoggerFactory.getLogger(ScheduleUtils.class);
+
     private final static String JOB_NAME = "TASK_";
-    
+
     /**
      * 获取触发器key
      */
@@ -74,8 +80,9 @@ public class ScheduleUtils {
      */
     public static void updateScheduleJob(Scheduler scheduler, ScheduleJobEntity scheduleJob) {
         try {
+            System.out.println("===========更新定时任务===========");
             TriggerKey triggerKey = getTriggerKey(scheduleJob.getJob_Id());
-
+            System.out.println("jobid"+scheduleJob.getJob_Id());
             //表达式调度构建器
             CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(scheduleJob.getCron_Expression())
             		.withMisfireHandlingInstructionDoNothing();
@@ -108,8 +115,9 @@ public class ScheduleUtils {
         	//参数
         	JobDataMap dataMap = new JobDataMap();
         	dataMap.put(ScheduleJobEntity.JOB_PARAM_KEY, scheduleJob);
-        	
-            scheduler.triggerJob(getJobKey(scheduleJob.getJob_Id()), dataMap);
+            JobKey jobKey = getJobKey(scheduleJob.getJob_Id());
+            System.out.println("jobKey:"+jobKey);
+            scheduler.triggerJob(jobKey);
         } catch (SchedulerException e) {
             throw new RRException("立即执行定时任务失败", e);
         }

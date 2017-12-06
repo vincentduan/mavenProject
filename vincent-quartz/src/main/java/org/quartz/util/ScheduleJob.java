@@ -10,16 +10,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-/** 定时任务
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2016年11月30日 下午12:44:21 */
+/**
+ *
+ */
 public class ScheduleJob implements Job  {
 	
-	private ExecutorService	service	= Executors.newSingleThreadExecutor();
-	
-	
+	//private ExecutorService	service	= Executors.newSingleThreadExecutor();
 
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {

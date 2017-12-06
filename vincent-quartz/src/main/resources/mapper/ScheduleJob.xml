@@ -9,7 +9,63 @@
     </select>
 
     <select id="queryList" resultType="org.quartz.domain.ScheduleJobEntity">
-        select * from schedule_job where job_id = #{scheduleJobQuery.job_Id}
+        select * from schedule_job where status=0
     </select>
+
+    <insert id="save" parameterType="org.quartz.domain.ScheduleJobEntity">
+        INSERT INTO schedule_job
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="job_Id != null" >
+                job_Id,
+            </if>
+            <if test="bean_Name != null" >
+                bean_Name,
+            </if>
+            <if test="method_Name != null" >
+                method_Name,
+            </if>
+            <if test="params != null" >
+                params,
+            </if>
+            <if test="cron_Expression != null" >
+                cron_Expression,
+            </if>
+            <if test="status != null" >
+                status,
+            </if>
+            <if test="remark != null" >
+                remark,
+            </if>
+            <if test="create_Time != null" >
+                create_Time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="job_Id != null" >
+                #{job_Id,jdbcType=BIGINT},
+            </if>
+            <if test="bean_Name != null" >
+                #{bean_Name,jdbcType=VARCHAR},
+            </if>
+            <if test="method_Name != null" >
+                #{method_Name,jdbcType=VARCHAR},
+            </if>
+            <if test="params != null" >
+                #{params,jdbcType=VARCHAR},
+            </if>
+            <if test="cron_Expression != null" >
+                #{cron_Expression,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null" >
+                #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null" >
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="create_Time != null" >
+                #{create_Time,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
 
 </mapper>
