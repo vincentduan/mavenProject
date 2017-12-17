@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface ScheduleJobDao {
 
-    ScheduleJobEntity queryObject(Long jobId);
+    ScheduleJobEntity queryObject(@Param("jobId")Long jobId);
 
     void save(ScheduleJobEntity scheduleJob);
 

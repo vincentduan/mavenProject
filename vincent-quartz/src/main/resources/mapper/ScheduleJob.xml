@@ -5,7 +5,7 @@
 <mapper namespace="org.quartz.dao.ScheduleJobDao">
 
     <select id="queryObject" resultType="org.quartz.domain.ScheduleJobEntity">
-        SELECT job_id,bean_name,method_name,params,cron_expression,status,remark,create_time from schedule_job where job_id='1'
+        SELECT job_id,bean_name,method_name,params,cron_expression,status,remark,create_time from schedule_job where job_id=#{jobId}
     </select>
 
     <select id="queryList" resultType="org.quartz.domain.ScheduleJobEntity">

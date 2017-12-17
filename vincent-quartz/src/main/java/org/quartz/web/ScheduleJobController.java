@@ -4,9 +4,7 @@ import org.quartz.domain.ScheduleJobEntity;
 import org.quartz.service.ScheduleJobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 
 @Controller
@@ -49,10 +47,26 @@ public class ScheduleJobController {
 	/** 立即执行任务 */
 	@ResponseBody
 	@RequestMapping(value = { "run" }, method = { RequestMethod.GET, RequestMethod.POST })
-	public String run(String jobIds) {
-        scheduleJobService.run(Long.parseLong("1"));
+	public String run(@RequestParam(value = "jobIds")  String jobIds) {
+        scheduleJobService.run(Long.parseLong(jobIds));
 		return "ok";
 	}
+
+	@ResponseBody
+	@RequestMapping(value = { "pause" }, method = { RequestMethod.GET, RequestMethod.POST })
+	public String pause(@RequestParam(value = "jobIds")  String jobIds) {
+		scheduleJobService.pause(Long.parseLong(jobIds));
+		return "ok";
+	}
+
+	@ResponseBody
+	@RequestMapping(value = { "resume" }, method = { RequestMethod.GET, RequestMethod.POST })
+	public String resume(@RequestParam(value = "jobIds")  String jobIds) {
+		scheduleJobService.resume(Long.parseLong(jobIds));
+		return "ok";
+	}
+
+
 	
 
 }

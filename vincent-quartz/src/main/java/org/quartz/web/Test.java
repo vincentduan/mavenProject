@@ -27,10 +27,10 @@ public class Test {
                     .startNow().build();
 //            JobDataMap dataMap = new JobDataMap();
 //            dataMap.put(ScheduleJobEntity.JOB_PARAM_KEY, "ss");
-            scheduler.scheduleJob(job, trigger);
+            scheduler.start();
+//            scheduler.scheduleJob(job, trigger);
             //scheduler.triggerJob(job.getKey());
-//            scheduler.start();
-            scheduler.triggerJob(job.getKey());
+//            scheduler.triggerJob(job.getKey());
         } catch (Exception e) {
             e.printStackTrace();
         }
