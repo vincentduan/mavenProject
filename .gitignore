@@ -1,6 +1,7 @@
 mavenProject/target/
 mavenProject/.idea/
 vincent-quartz/target/
+vincent-quartz/.idea/
 vincent-quartz/vincent-quartz.iml
 vincent-common/target/
 vincent-common/vincent-common.iml
