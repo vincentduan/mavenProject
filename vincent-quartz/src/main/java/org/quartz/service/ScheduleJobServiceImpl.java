@@ -31,17 +31,19 @@ public class ScheduleJobServiceImpl implements ScheduleJobService {
 	@PostConstruct
 	public void init() throws Exception {
 		System.out.println("初始化定时器");
+		scheduler.start();
 		List<ScheduleJobEntity> scheduleJobList = schedulerJobDao.queryList(new ScheduleJobQuery());
 		for (ScheduleJobEntity scheduleJob : scheduleJobList) {
 			CronTrigger cronTrigger = ScheduleUtils.getCronTrigger(scheduler, scheduleJob.getJob_Id());
 			// 如果不存在，则创建
+			System.out.println("....................");
 			if (cronTrigger == null) {
                 System.out.println("cronTrigger 不存在");
                 ScheduleUtils.createScheduleJob(scheduler, scheduleJob);
 			}
 			else {
-                System.out.println("cronTrigger 存在");
-				ScheduleUtils.updateScheduleJob(scheduler, scheduleJob);
+                //System.out.println("cronTrigger 存在");
+				//ScheduleUtils.updateScheduleJob(scheduler, scheduleJob);
 			}
 		}
 	}
@@ -58,8 +60,18 @@ public class ScheduleJobServiceImpl implements ScheduleJobService {
         }
     }
 
-    @Override
+	@Override
+	public void pause(Long jobId) {
+		ScheduleUtils.pauseJob(scheduler, jobId);
+	}
+
+	@Override
     public void save(ScheduleJobEntity scheduleJob) {
         schedulerJobDao.save(scheduleJob);
     }
+
+	@Override
+	public void resume(long l) {
+		ScheduleUtils.resumeJob(scheduler, l);
+	}
 }

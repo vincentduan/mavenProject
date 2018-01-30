@@ -9,5 +9,9 @@ public interface ScheduleJobService {
 
 	void run(Long... jobIds);
 
+	void pause(Long jobId);
+
     void save(ScheduleJobEntity scheduleJob);
+
+    void resume(long l);
 }

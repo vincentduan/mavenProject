@@ -50,7 +50,7 @@ public class ScheduleUtils {
      * 创建定时任务
      */
     public static void createScheduleJob(Scheduler scheduler, ScheduleJobEntity scheduleJob) {
-        try {
+        /*try {
         	//构建job信息
             JobDetail jobDetail = JobBuilder.newJob(ScheduleJob.class).withIdentity(getJobKey(scheduleJob.getJob_Id())).build();
 
@@ -63,16 +63,16 @@ public class ScheduleUtils {
 
             //放入参数，运行时的方法可以获取
             jobDetail.getJobDataMap().put(ScheduleJobEntity.JOB_PARAM_KEY, scheduleJob);
-            
+            System.out.println(jobDetail.getKey().toString()+"-----");
             scheduler.scheduleJob(jobDetail, trigger);
             
             //暂停任务
-            if(scheduleJob.getStatus() == Constant.ScheduleStatus.PAUSE.getValue()){
-            	pauseJob(scheduler, scheduleJob.getJob_Id());
-            }
+//            if(scheduleJob.getStatus() == Constant.ScheduleStatus.PAUSE.getValue()){
+//            	pauseJob(scheduler, scheduleJob.getJob_Id());
+//            }
         } catch (SchedulerException e) {
             throw new RRException("创建定时任务失败", e);
-        }
+        }*/
     }
     
     /**
@@ -112,12 +112,19 @@ public class ScheduleUtils {
      */
     public static void run(Scheduler scheduler, ScheduleJobEntity scheduleJob) {
         try {
-        	//参数
-        	JobDataMap dataMap = new JobDataMap();
-        	dataMap.put(ScheduleJobEntity.JOB_PARAM_KEY, scheduleJob);
-            JobKey jobKey = getJobKey(scheduleJob.getJob_Id());
-            System.out.println("jobKey:"+jobKey);
-            scheduler.triggerJob(jobKey);
+            JobDetail jobDetail = JobBuilder.newJob(ScheduleJob.class).withIdentity(getJobKey(scheduleJob.getJob_Id())).build();
+
+            //表达式调度构建器
+            CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(scheduleJob.getCron_Expression())
+                    .withMisfireHandlingInstructionDoNothing();
+
+            //按新的cronExpression表达式构建一个新的trigger
+            CronTrigger trigger = TriggerBuilder.newTrigger().withIdentity(getTriggerKey(scheduleJob.getJob_Id())).withSchedule(scheduleBuilder).build();
+
+            //放入参数，运行时的方法可以获取
+            jobDetail.getJobDataMap().put(ScheduleJobEntity.JOB_PARAM_KEY, scheduleJob);
+            System.out.println(jobDetail.getKey().toString()+"-----");
+            scheduler.scheduleJob(jobDetail, trigger);
         } catch (SchedulerException e) {
             throw new RRException("立即执行定时任务失败", e);
         }
