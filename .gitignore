@@ -7,7 +7,9 @@ vincent-common/target/
 vincent-common/vincent-common.iml
 vincent-kafka/target/
 vincent-kafka/vincent-kafka.iml
-
+utils/.idea/
+utils/target/
+utils/utils.iml
 file2DB/.idea/
 file2DB/logs/
 file2DB/log/
