@@ -21,3 +21,8 @@ file2DB/file2DB-service/file2DB-service.iml
 file2DB/file2DB-web/target/
 file2DB/file2DB-web/file2DB-web.iml
 file2DB/file2DB-common/target/
+file2DB/file2DB-common/file2DB-common.iml
+vincent-common/vincent-common.iml
+vincent-kafka/vincent-kafka.iml
+vincent-quartz/vincent-job.iml
+
