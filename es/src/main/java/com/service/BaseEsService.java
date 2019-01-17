@@ -4,4 +4,6 @@ public interface BaseEsService {
 
     void testBulk();
 
+    void deleteByQuery();
+
 }

@@ -1,30 +1,18 @@
 package com.es;
 
-import org.elasticsearch.action.DocWriteRequest;
-import org.elasticsearch.action.bulk.BulkItemResponse;
-import org.elasticsearch.action.bulk.BulkProcessor;
-import org.elasticsearch.action.bulk.BulkRequest;
-import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.common.transport.InetSocketTransportAddress;
-import org.elasticsearch.common.unit.TimeValue;
+import org.elasticsearch.common.transport.TransportAddress;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-
-import java.io.BufferedWriter;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.util.Iterator;
-import java.util.List;
+
+//import org.elasticsearch.common.transport.InetSocketTransportAddress;
 
 /**
  * 从工厂类中获取Client方法
@@ -47,8 +35,12 @@ public class EsClientFactory {
         Client client = new PreBuiltTransportClient(settings);
         for (String ip : esConf.getIps().split(COMMA)) {
             try {
+                // es 5.4.3版本
+//                ((TransportClient) client)
+//                        .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(ip), Integer.parseInt(esConf.getPort())));
+                // es 6.2.3版本
                 ((TransportClient) client)
-                        .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(ip), Integer.parseInt(esConf.getPort())));
+                        .addTransportAddress(new TransportAddress(InetAddress.getByName(ip), 9301));
             } catch (UnknownHostException e) {
                 e.printStackTrace();
             }
