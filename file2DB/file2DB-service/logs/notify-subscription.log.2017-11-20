@@ -1,0 +1,1393 @@
+2017-11-20 10:14:18,285 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-20 10:14:18,294 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-20 10:14:18,298 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@73846619, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4bec1f0c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@29ca901e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5649fd9b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6adede5]
+2017-11-20 10:14:18,409 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\service.xml]
+2017-11-20 10:14:18,655 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 10:14:18,701 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 10:14:18,721 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 10:14:18,732 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 10:14:18,744 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 10:14:18,755 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 10:14:18,769 - Refreshing org.springframework.context.support.GenericApplicationContext@72b6cbcc: startup date [Mon Nov 20 10:14:18 CST 2017]; root of context hierarchy
+2017-11-20 10:14:19,011 - Skipping MapperFactoryBean with name 'extractDao' and 'org.dao.ExtractDao' mapperInterface. Bean already defined with the same name!
+2017-11-20 10:14:19,012 - No MyBatis mapper was found in '[org.dao]' package. Please check your configuration.
+2017-11-20 10:14:19,107 - MLog clients using log4j logging.
+2017-11-20 10:14:19,352 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-11-20 10:14:19,586 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 10:14:19,670 - Kafka version : 0.11.0.0
+2017-11-20 10:14:19,670 - Kafka commitId : cb8625948210849f
+2017-11-20 10:14:19,719 - Starting beans in phase 0
+2017-11-20 10:14:19,755 - Discovered coordinator 192.168.152.45:9092 (id: 2147483647 rack: null) for group 0.
+2017-11-20 10:14:19,757 - Revoking previously assigned partitions [] for group 0
+2017-11-20 10:14:19,757 - partitions revoked: []
+2017-11-20 10:14:19,758 - (Re-)joining group 0
+2017-11-20 10:14:19,767 - Successfully joined group 0 with generation 3
+2017-11-20 10:14:19,768 - Setting newly assigned partitions [test1-0] for group 0
+2017-11-20 10:14:19,768 - partitions assigned: [test1-0]
+2017-11-20 10:14:19,879 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 2, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgeykk9r1npmd4v1dxqz1o|192c3f1e, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgeykk9r1npmd4v1dxqz1o|192c3f1e, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://192.168.152.39:3306/renyuanku?useUnicode=true&characterEncoding=utf8&autoReconnect=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2017-11-20 10:15:18,895 - Closing org.springframework.context.support.GenericApplicationContext@72b6cbcc: startup date [Mon Nov 20 10:14:18 CST 2017]; root of context hierarchy
+2017-11-20 10:15:18,899 - Stopping beans in phase 0
+2017-11-20 10:15:19,067 - Consumer stopped
+2017-11-20 11:40:05,242 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-20 11:40:05,289 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-20 11:40:05,305 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@57855c9a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3b084709, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3224f60b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@63e2203c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1efed156]
+2017-11-20 11:40:05,508 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\service.xml]
+2017-11-20 11:40:06,336 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 11:40:06,383 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 11:40:06,399 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 11:40:06,414 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 11:40:06,430 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 11:40:06,445 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 11:40:06,445 - Refreshing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 11:40:06 CST 2017]; root of context hierarchy
+2017-11-20 11:40:06,820 - Skipping MapperFactoryBean with name 'extractDao' and 'org.dao.ExtractDao' mapperInterface. Bean already defined with the same name!
+2017-11-20 11:40:06,820 - No MyBatis mapper was found in '[org.dao]' package. Please check your configuration.
+2017-11-20 11:40:07,055 - MLog clients using log4j logging.
+2017-11-20 11:40:07,305 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-11-20 11:40:08,133 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 11:40:08,367 - Kafka version : 0.11.0.0
+2017-11-20 11:40:08,367 - Kafka commitId : cb8625948210849f
+2017-11-20 11:40:08,524 - Starting beans in phase 0
+2017-11-20 11:40:08,586 - Closing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 11:40:06 CST 2017]; root of context hierarchy
+2017-11-20 11:40:08,602 - Stopping beans in phase 0
+2017-11-20 11:40:08,617 - Consumer stopped
+2017-11-20 13:05:50,916 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-20 13:05:50,923 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-20 13:05:50,929 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@57855c9a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3b084709, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3224f60b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@63e2203c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1efed156]
+2017-11-20 13:05:50,982 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\service.xml]
+2017-11-20 13:05:51,125 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 13:05:51,148 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 13:05:51,162 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 13:05:51,174 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 13:05:51,189 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 13:05:51,203 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 13:05:51,217 - Refreshing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 13:05:51 CST 2017]; root of context hierarchy
+2017-11-20 13:05:51,331 - Skipping MapperFactoryBean with name 'extractDao' and 'org.dao.ExtractDao' mapperInterface. Bean already defined with the same name!
+2017-11-20 13:05:51,332 - No MyBatis mapper was found in '[org.dao]' package. Please check your configuration.
+2017-11-20 13:05:51,428 - MLog clients using log4j logging.
+2017-11-20 13:05:51,651 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-11-20 13:05:51,882 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 13:05:51,962 - Kafka version : 0.11.0.0
+2017-11-20 13:05:51,962 - Kafka commitId : cb8625948210849f
+2017-11-20 13:05:52,012 - Starting beans in phase 0
+2017-11-20 13:05:52,054 - Closing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 13:05:51 CST 2017]; root of context hierarchy
+2017-11-20 13:05:52,063 - Stopping beans in phase 0
+2017-11-20 13:05:52,069 - Consumer stopped
+2017-11-20 13:50:04,213 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-20 13:50:04,219 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-20 13:50:04,224 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@57855c9a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3b084709, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3224f60b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@63e2203c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1efed156]
+2017-11-20 13:50:04,274 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\service.xml]
+2017-11-20 13:50:04,415 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 13:50:04,438 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 13:50:04,456 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 13:50:04,468 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 13:50:04,482 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 13:50:04,493 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 13:50:04,507 - Refreshing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 13:50:04 CST 2017]; root of context hierarchy
+2017-11-20 13:50:04,613 - Skipping MapperFactoryBean with name 'extractDao' and 'org.dao.ExtractDao' mapperInterface. Bean already defined with the same name!
+2017-11-20 13:50:04,614 - No MyBatis mapper was found in '[org.dao]' package. Please check your configuration.
+2017-11-20 13:50:04,701 - MLog clients using log4j logging.
+2017-11-20 13:50:04,917 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-11-20 13:50:05,148 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 13:50:05,228 - Kafka version : 0.11.0.0
+2017-11-20 13:50:05,228 - Kafka commitId : cb8625948210849f
+2017-11-20 13:50:05,278 - Starting beans in phase 0
+2017-11-20 13:50:05,300 - Closing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 13:50:04 CST 2017]; root of context hierarchy
+2017-11-20 13:50:05,302 - Stopping beans in phase 0
+2017-11-20 13:50:05,306 - Consumer stopped
+2017-11-20 14:03:27,784 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-20 14:03:27,791 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-20 14:03:27,799 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@57855c9a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3b084709, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3224f60b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@63e2203c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1efed156]
+2017-11-20 14:03:27,852 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\service.xml]
+2017-11-20 14:03:27,999 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 14:03:28,017 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 14:03:28,036 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 14:03:28,050 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 14:03:28,065 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 14:03:28,078 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 14:03:28,093 - Refreshing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 14:03:28 CST 2017]; root of context hierarchy
+2017-11-20 14:03:28,209 - Skipping MapperFactoryBean with name 'extractDao' and 'org.dao.ExtractDao' mapperInterface. Bean already defined with the same name!
+2017-11-20 14:03:28,209 - No MyBatis mapper was found in '[org.dao]' package. Please check your configuration.
+2017-11-20 14:03:28,296 - MLog clients using log4j logging.
+2017-11-20 14:03:28,514 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-11-20 14:03:28,752 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 14:03:28,835 - Kafka version : 0.11.0.0
+2017-11-20 14:03:28,835 - Kafka commitId : cb8625948210849f
+2017-11-20 14:03:28,883 - Starting beans in phase 0
+2017-11-20 14:03:28,901 - Closing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 14:03:28 CST 2017]; root of context hierarchy
+2017-11-20 14:03:28,903 - Stopping beans in phase 0
+2017-11-20 14:03:28,917 - Consumer stopped
+2017-11-20 14:07:38,834 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-20 14:07:38,841 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-20 14:07:38,847 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@57855c9a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3b084709, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3224f60b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@63e2203c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1efed156]
+2017-11-20 14:07:38,900 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\service.xml]
+2017-11-20 14:07:39,049 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 14:07:39,068 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 14:07:39,087 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 14:07:39,103 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 14:07:39,114 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 14:07:39,126 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 14:07:39,141 - Refreshing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 14:07:39 CST 2017]; root of context hierarchy
+2017-11-20 14:07:39,261 - Skipping MapperFactoryBean with name 'extractDao' and 'org.dao.ExtractDao' mapperInterface. Bean already defined with the same name!
+2017-11-20 14:07:39,262 - No MyBatis mapper was found in '[org.dao]' package. Please check your configuration.
+2017-11-20 14:07:39,355 - MLog clients using log4j logging.
+2017-11-20 14:07:39,591 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-11-20 14:07:39,838 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 14:07:39,921 - Kafka version : 0.11.0.0
+2017-11-20 14:07:39,922 - Kafka commitId : cb8625948210849f
+2017-11-20 14:07:39,969 - Starting beans in phase 0
+2017-11-20 14:07:39,986 - Closing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 14:07:39 CST 2017]; root of context hierarchy
+2017-11-20 14:07:39,988 - Stopping beans in phase 0
+2017-11-20 14:07:40,003 - Consumer stopped
+2017-11-20 16:42:44,348 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-20 16:42:44,358 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-20 16:42:44,364 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@57855c9a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3b084709, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3224f60b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@63e2203c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1efed156]
+2017-11-20 16:42:44,419 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\service.xml]
+2017-11-20 16:42:44,576 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 16:42:44,595 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 16:42:44,617 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 16:42:44,627 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 16:42:44,651 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 16:42:44,665 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 16:42:44,683 - Refreshing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 16:42:44 CST 2017]; root of context hierarchy
+2017-11-20 16:42:44,811 - Skipping MapperFactoryBean with name 'extractDao' and 'org.dao.ExtractDao' mapperInterface. Bean already defined with the same name!
+2017-11-20 16:42:44,811 - No MyBatis mapper was found in '[org.dao]' package. Please check your configuration.
+2017-11-20 16:42:44,919 - MLog clients using log4j logging.
+2017-11-20 16:42:45,147 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-11-20 16:42:45,404 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 16:42:45,486 - Kafka version : 0.11.0.0
+2017-11-20 16:42:45,486 - Kafka commitId : cb8625948210849f
+2017-11-20 16:42:45,492 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 16:42:45,496 - Kafka version : 0.11.0.0
+2017-11-20 16:42:45,496 - Kafka commitId : cb8625948210849f
+2017-11-20 16:42:45,547 - Starting beans in phase 0
+2017-11-20 16:42:45,567 - Discovered coordinator 192.168.152.45:9092 (id: 2147483647 rack: null) for group 0.
+2017-11-20 16:42:45,567 - Discovered coordinator 192.168.152.45:9092 (id: 2147483647 rack: null) for group 0.
+2017-11-20 16:42:45,569 - Revoking previously assigned partitions [] for group 0
+2017-11-20 16:42:45,570 - partitions revoked: []
+2017-11-20 16:42:45,569 - Revoking previously assigned partitions [] for group 0
+2017-11-20 16:42:45,570 - partitions revoked: []
+2017-11-20 16:42:45,570 - (Re-)joining group 0
+2017-11-20 16:42:45,570 - (Re-)joining group 0
+2017-11-20 16:42:45,583 - Successfully joined group 0 with generation 34
+2017-11-20 16:42:45,585 - Setting newly assigned partitions [topic2-0] for group 0
+2017-11-20 16:42:45,585 - partitions assigned: [topic2-0]
+2017-11-20 16:42:45,586 - Successfully joined group 0 with generation 34
+2017-11-20 16:42:45,586 - Setting newly assigned partitions [topic2-1] for group 0
+2017-11-20 16:42:45,586 - partitions assigned: [topic2-1]
+2017-11-20 16:42:45,641 - Closing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 16:42:44 CST 2017]; root of context hierarchy
+2017-11-20 16:42:45,643 - Stopping beans in phase 0
+2017-11-20 16:42:45,753 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 2, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgeykk9r1o3hw0jfbhvgc|5ab9e72c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgeykk9r1o3hw0jfbhvgc|5ab9e72c, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://192.168.152.39:3306/renyuanku?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2017-11-20 16:42:48,570 - Consumer stopped
+2017-11-20 16:42:48,643 - Consumer stopped
+2017-11-20 16:45:36,740 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-20 16:45:36,747 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-20 16:45:36,753 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@57855c9a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3b084709, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3224f60b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@63e2203c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1efed156]
+2017-11-20 16:45:36,807 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\service.xml]
+2017-11-20 16:45:36,963 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 16:45:36,985 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 16:45:37,008 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 16:45:37,024 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 16:45:37,055 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 16:45:37,066 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 16:45:37,084 - Refreshing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 16:45:37 CST 2017]; root of context hierarchy
+2017-11-20 16:45:37,206 - Skipping MapperFactoryBean with name 'extractDao' and 'org.dao.ExtractDao' mapperInterface. Bean already defined with the same name!
+2017-11-20 16:45:37,207 - No MyBatis mapper was found in '[org.dao]' package. Please check your configuration.
+2017-11-20 16:45:37,297 - MLog clients using log4j logging.
+2017-11-20 16:45:37,519 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-11-20 16:45:37,763 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 16:45:37,812 - Kafka version : 0.11.0.0
+2017-11-20 16:45:37,812 - Kafka commitId : cb8625948210849f
+2017-11-20 16:45:37,850 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 16:45:37,854 - Kafka version : 0.11.0.0
+2017-11-20 16:45:37,854 - Kafka commitId : cb8625948210849f
+2017-11-20 16:45:37,907 - Starting beans in phase 0
+2017-11-20 16:45:37,928 - Discovered coordinator 192.168.152.45:9092 (id: 2147483647 rack: null) for group 0.
+2017-11-20 16:45:37,928 - Discovered coordinator 192.168.152.45:9092 (id: 2147483647 rack: null) for group 0.
+2017-11-20 16:45:37,930 - Revoking previously assigned partitions [] for group 0
+2017-11-20 16:45:37,931 - Revoking previously assigned partitions [] for group 0
+2017-11-20 16:45:37,931 - partitions revoked: []
+2017-11-20 16:45:37,931 - partitions revoked: []
+2017-11-20 16:45:37,932 - (Re-)joining group 0
+2017-11-20 16:45:37,932 - (Re-)joining group 0
+2017-11-20 16:45:37,938 - Closing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 16:45:37 CST 2017]; root of context hierarchy
+2017-11-20 16:45:37,943 - Successfully joined group 0 with generation 36
+2017-11-20 16:45:37,944 - Successfully joined group 0 with generation 36
+2017-11-20 16:45:37,945 - Setting newly assigned partitions [topic2-0] for group 0
+2017-11-20 16:45:37,945 - partitions assigned: [topic2-0]
+2017-11-20 16:45:37,946 - Setting newly assigned partitions [topic2-1] for group 0
+2017-11-20 16:45:37,946 - partitions assigned: [topic2-1]
+2017-11-20 16:45:37,957 - Stopping beans in phase 0
+2017-11-20 16:45:37,969 - Consumer stopped
+2017-11-20 16:45:37,973 - Consumer stopped
+2017-11-20 16:52:00,643 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-20 16:52:00,651 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-20 16:52:00,656 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@57855c9a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3b084709, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3224f60b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@63e2203c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1efed156]
+2017-11-20 16:52:00,712 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\service.xml]
+2017-11-20 16:52:00,863 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 16:52:00,885 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 16:52:00,902 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 16:52:00,912 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 16:52:00,941 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 16:52:00,953 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 16:52:00,969 - Refreshing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 16:52:00 CST 2017]; root of context hierarchy
+2017-11-20 16:52:01,102 - Skipping MapperFactoryBean with name 'extractDao' and 'org.dao.ExtractDao' mapperInterface. Bean already defined with the same name!
+2017-11-20 16:52:01,102 - No MyBatis mapper was found in '[org.dao]' package. Please check your configuration.
+2017-11-20 16:52:01,208 - MLog clients using log4j logging.
+2017-11-20 16:52:01,444 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-11-20 16:52:01,696 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 16:52:01,780 - Kafka version : 0.11.0.0
+2017-11-20 16:52:01,780 - Kafka commitId : cb8625948210849f
+2017-11-20 16:52:01,784 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 16:52:01,788 - Kafka version : 0.11.0.0
+2017-11-20 16:52:01,789 - Kafka commitId : cb8625948210849f
+2017-11-20 16:52:01,842 - Starting beans in phase 0
+2017-11-20 16:52:01,862 - Closing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 16:52:00 CST 2017]; root of context hierarchy
+2017-11-20 16:52:01,863 - Stopping beans in phase 0
+2017-11-20 16:52:01,869 - Consumer stopped
+2017-11-20 16:52:01,873 - Consumer stopped
+2017-11-20 16:57:02,613 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-20 16:57:02,620 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-20 16:57:02,625 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@57855c9a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3b084709, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3224f60b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@63e2203c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1efed156]
+2017-11-20 16:57:02,678 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\service.xml]
+2017-11-20 16:57:02,824 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 16:57:02,841 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 16:57:02,858 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 16:57:02,868 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 16:57:02,885 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 16:57:02,898 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 16:57:02,911 - Refreshing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 16:57:02 CST 2017]; root of context hierarchy
+2017-11-20 16:57:03,031 - Skipping MapperFactoryBean with name 'extractDao' and 'org.dao.ExtractDao' mapperInterface. Bean already defined with the same name!
+2017-11-20 16:57:03,032 - No MyBatis mapper was found in '[org.dao]' package. Please check your configuration.
+2017-11-20 16:57:03,129 - MLog clients using log4j logging.
+2017-11-20 16:57:03,354 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-11-20 16:57:03,634 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 16:57:03,719 - Kafka version : 0.11.0.0
+2017-11-20 16:57:03,719 - Kafka commitId : cb8625948210849f
+2017-11-20 16:57:03,724 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 16:57:03,729 - Kafka version : 0.11.0.0
+2017-11-20 16:57:03,729 - Kafka commitId : cb8625948210849f
+2017-11-20 16:57:03,776 - Starting beans in phase 0
+2017-11-20 16:57:03,813 - Discovered coordinator 192.168.152.45:9092 (id: 2147483647 rack: null) for group 0.
+2017-11-20 16:57:03,815 - Revoking previously assigned partitions [] for group 0
+2017-11-20 16:57:03,818 - partitions revoked: []
+2017-11-20 16:57:03,818 - (Re-)joining group 0
+2017-11-20 16:57:03,837 - Discovered coordinator 192.168.152.45:9092 (id: 2147483647 rack: null) for group 0.
+2017-11-20 16:57:03,839 - Revoking previously assigned partitions [] for group 0
+2017-11-20 16:57:03,839 - partitions revoked: []
+2017-11-20 16:57:03,839 - (Re-)joining group 0
+2017-11-20 16:57:03,844 - Closing org.springframework.context.support.GenericApplicationContext@7a765367: startup date [Mon Nov 20 16:57:02 CST 2017]; root of context hierarchy
+2017-11-20 16:57:03,845 - Stopping beans in phase 0
+2017-11-20 16:57:07,403 - Consumer stopped
+2017-11-20 16:57:07,404 - Consumer stopped
+2017-11-20 17:05:01,641 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-20 17:05:01,645 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-20 17:05:01,654 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3224f60b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@63e2203c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1efed156, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6737fd8f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@72b6cbcc]
+2017-11-20 17:05:01,710 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\service.xml]
+2017-11-20 17:05:01,879 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 17:05:01,905 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 17:05:01,924 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 17:05:01,937 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 17:05:01,952 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 17:05:01,963 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 17:05:01,984 - Refreshing org.springframework.context.support.GenericApplicationContext@17d677df: startup date [Mon Nov 20 17:05:01 CST 2017]; root of context hierarchy
+2017-11-20 17:05:02,095 - Skipping MapperFactoryBean with name 'extractDao' and 'org.dao.ExtractDao' mapperInterface. Bean already defined with the same name!
+2017-11-20 17:05:02,095 - No MyBatis mapper was found in '[org.dao]' package. Please check your configuration.
+2017-11-20 17:05:02,187 - MLog clients using log4j logging.
+2017-11-20 17:05:02,411 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-11-20 17:05:02,647 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 17:05:02,731 - Kafka version : 0.11.0.0
+2017-11-20 17:05:02,731 - Kafka commitId : cb8625948210849f
+2017-11-20 17:05:02,737 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 17:05:02,740 - Kafka version : 0.11.0.0
+2017-11-20 17:05:02,741 - Kafka commitId : cb8625948210849f
+2017-11-20 17:05:02,792 - Starting beans in phase 0
+2017-11-20 17:05:02,815 - Discovered coordinator 192.168.152.45:9092 (id: 2147483647 rack: null) for group 0.
+2017-11-20 17:05:02,817 - Revoking previously assigned partitions [] for group 0
+2017-11-20 17:05:02,818 - partitions revoked: []
+2017-11-20 17:05:02,818 - (Re-)joining group 0
+2017-11-20 17:05:02,822 - Discovered coordinator 192.168.152.45:9092 (id: 2147483647 rack: null) for group 0.
+2017-11-20 17:05:02,823 - Revoking previously assigned partitions [] for group 0
+2017-11-20 17:05:02,823 - partitions revoked: []
+2017-11-20 17:05:02,824 - (Re-)joining group 0
+2017-11-20 17:05:02,828 - Closing org.springframework.context.support.GenericApplicationContext@17d677df: startup date [Mon Nov 20 17:05:01 CST 2017]; root of context hierarchy
+2017-11-20 17:05:02,829 - Stopping beans in phase 0
+2017-11-20 17:05:05,109 - Consumer stopped
+2017-11-20 17:05:05,109 - Consumer stopped
+2017-11-20 17:19:59,700 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-11-20 17:19:59,704 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-11-20 17:19:59,712 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3224f60b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@63e2203c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1efed156, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6737fd8f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@72b6cbcc]
+2017-11-20 17:19:59,764 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\service.xml]
+2017-11-20 17:19:59,908 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 17:19:59,926 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 17:19:59,941 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 17:19:59,953 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-consumer.xml]
+2017-11-20 17:19:59,971 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-dao.xml]
+2017-11-20 17:19:59,982 - Loading XML bean definitions from file [F:\git\mavenProject\file2DB\file2DB-service\target\classes\spring\spring-producer.xml]
+2017-11-20 17:19:59,997 - Refreshing org.springframework.context.support.GenericApplicationContext@17d677df: startup date [Mon Nov 20 17:19:59 CST 2017]; root of context hierarchy
+2017-11-20 17:20:00,111 - Skipping MapperFactoryBean with name 'extractDao' and 'org.dao.ExtractDao' mapperInterface. Bean already defined with the same name!
+2017-11-20 17:20:00,111 - No MyBatis mapper was found in '[org.dao]' package. Please check your configuration.
+2017-11-20 17:20:00,224 - MLog clients using log4j logging.
+2017-11-20 17:20:00,454 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-11-20 17:20:00,700 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 17:20:00,752 - Kafka version : 0.11.0.0
+2017-11-20 17:20:00,752 - Kafka commitId : cb8625948210849f
+2017-11-20 17:20:00,792 - ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.152.45:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 0
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2017-11-20 17:20:00,796 - Kafka version : 0.11.0.0
+2017-11-20 17:20:00,796 - Kafka commitId : cb8625948210849f
+2017-11-20 17:20:00,853 - Starting beans in phase 0
+2017-11-20 17:20:00,870 - Discovered coordinator 192.168.152.45:9092 (id: 2147483647 rack: null) for group 0.
+2017-11-20 17:20:00,872 - Revoking previously assigned partitions [] for group 0
+2017-11-20 17:20:00,873 - partitions revoked: []
+2017-11-20 17:20:00,873 - Discovered coordinator 192.168.152.45:9092 (id: 2147483647 rack: null) for group 0.
+2017-11-20 17:20:00,873 - (Re-)joining group 0
+2017-11-20 17:20:00,874 - Revoking previously assigned partitions [] for group 0
+2017-11-20 17:20:00,874 - partitions revoked: []
+2017-11-20 17:20:00,874 - (Re-)joining group 0
+2017-11-20 17:20:00,896 - Closing org.springframework.context.support.GenericApplicationContext@17d677df: startup date [Mon Nov 20 17:19:59 CST 2017]; root of context hierarchy
+2017-11-20 17:20:00,899 - Stopping beans in phase 0
+2017-11-20 17:20:01,008 - Consumer stopped
+2017-11-20 17:20:01,010 - Consumer stopped
