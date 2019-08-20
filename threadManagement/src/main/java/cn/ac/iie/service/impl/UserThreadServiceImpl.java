@@ -19,11 +19,11 @@ public class UserThreadServiceImpl implements UserThreadService {
     public void serviceTest(String username) {
         log.info("开启执行一个Service, 这个Service执行时间为30s, threadId:{}",Thread.currentThread().getId());
         userThreadDao.add(username, Integer.parseInt(Thread.currentThread().getId() +""), "started");
-        /*try {
+        try {
             Thread.sleep(30000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }*/
+        }
         log.info("执行完成一个Service, threadId:{}",Thread.currentThread().getId());
         userThreadDao.update(username, Integer.parseInt(Thread.currentThread().getId() +""), "ended");
     }
