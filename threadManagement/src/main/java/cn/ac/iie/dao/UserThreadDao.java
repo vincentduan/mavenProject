@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Slf4j
 public class UserThreadDao {
+
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
