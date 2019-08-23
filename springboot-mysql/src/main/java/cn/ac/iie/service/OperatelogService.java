@@ -15,6 +15,6 @@ public interface OperatelogService {
     List<String> queryOperateDesc();
 
     // 根据操作日志方向得到用户ID
-    List<String> getUserIdByDirection(String direction);
+    List<String> getUserIdByOperateDesc(String direction);
 
 }

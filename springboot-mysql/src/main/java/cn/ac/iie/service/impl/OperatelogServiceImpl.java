@@ -32,7 +32,7 @@ public class OperatelogServiceImpl implements OperatelogService {
     }
 
     @Override
-    public List<String> getUserIdByDirection(String direction) {
+    public List<String> getUserIdByOperateDesc(String direction) {
         return operatelogDao.getUserIdByDirection(direction);
     }
 
