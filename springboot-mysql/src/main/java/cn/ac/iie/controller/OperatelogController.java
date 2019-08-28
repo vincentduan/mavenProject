@@ -47,18 +47,20 @@ public class OperatelogController {
 
     // 根据操作类型，得到所有权限ID
     @GetMapping("{operateDesc}/priIDs")
-    public Object getPriIdByDirection(@PathVariable("operateDesc") String operateDesc) {
-        List<String> userIdByDirection = operatelogService.getUserIdByOperateDesc(operateDesc);
-        Map<String, Integer> result = new HashMap<>();
-        for (String userId : userIdByDirection) {
+    public Object getPriIdByOperateDesc(@PathVariable("operateDesc") String operateDesc) {
+        List<String> userIdByOperateDesc = operatelogService.getUserIdByOperateDesc(operateDesc);
+        Map<String, Integer> stringIntegerHashMap = new HashMap<>();
+        for (String userId : userIdByOperateDesc) {
             List<String> priByUserId = userPriService.getPriByUserId(userId);
             for (String pri : priByUserId) {
-                result.put(pri, result.get(pri) == null ? 1 : result.get(pri) + 1);
+                stringIntegerHashMap.put(pri, stringIntegerHashMap.get(pri) == null ? 1 : stringIntegerHashMap.get(pri) + 1);
             }
         }
-        Stream<Map.Entry<String, Integer>> st = result.entrySet().stream();
-        st.sorted(Comparator.comparing(e -> e.getValue())).forEach(e -> result.put(e.getKey(), e.getValue()));
-        return ResponseVOUtil.success(result);
+        Map<String, Integer> linkedHashMap = new LinkedHashMap<>();
+        Stream<Map.Entry<String, Integer>> st = stringIntegerHashMap.entrySet().stream();
+        st.sorted(Comparator.comparing(e -> e.getValue())).forEach(e ->
+                linkedHashMap.put(e.getKey(), e.getValue()));
+        return ResponseVOUtil.success(linkedHashMap);
     }
 
 }

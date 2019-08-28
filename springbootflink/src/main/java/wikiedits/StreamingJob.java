@@ -14,7 +14,7 @@ import org.apache.flink.util.Collector;
 public class StreamingJob {
     public static void main(String[] args) throws Exception {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        DataStream<String> text = env.socketTextStream("127.0.0.1", 9000);
+        DataStream<String> text = env.socketTextStream("192.168.152.45", 9000);
         DataStream<Tuple2<String, Integer>> dataStream = text.flatMap(new FlatMapFunction<String, Tuple2<String, Integer>>() {
             @Override
             public void flatMap(String s, Collector<Tuple2<String, Integer>> collector) throws Exception {
@@ -26,8 +26,6 @@ public class StreamingJob {
                     }
                 }
             }
-
-
         }).keyBy(0).timeWindow(Time.seconds(5)).sum(1);
 
         dataStream.print();
