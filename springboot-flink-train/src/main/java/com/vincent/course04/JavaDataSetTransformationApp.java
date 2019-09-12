@@ -22,7 +22,21 @@ public class JavaDataSetTransformationApp {
 //        flatMapFunction(executionEnvironment);
 //        distinctFunction(executionEnvironment);
 //        joinFunction(executionEnvironment);
-        outjoinFunction(executionEnvironment);
+//        outjoinFunction(executionEnvironment);
+        crossFunction(executionEnvironment);
+    }
+
+    public static void crossFunction(ExecutionEnvironment env) throws Exception {
+        List<String> info1 = new ArrayList<>();
+        info1.add("乔峰");
+        info1.add("慕容复");
+        List<String> info2 = new ArrayList<>();
+        info2.add("3");
+        info2.add("1");
+        info2.add("0");
+        DataSource<String> data1 = env.fromCollection(info1);
+        DataSource<String> data2 = env.fromCollection(info2);
+        data1.cross(data2).print();
     }
 
     public static void outjoinFunction(ExecutionEnvironment env) throws Exception {
@@ -42,19 +56,30 @@ public class JavaDataSetTransformationApp {
         data1.leftOuterJoin(data2).where(0).equalTo(0).with(new JoinFunction<Tuple2<Integer, String>, Tuple2<Integer, String>, Tuple3<Integer, String, String>>() {
             @Override
             public Tuple3<Integer, String, String> join(Tuple2<Integer, String> first, Tuple2<Integer, String> second) throws Exception {
-                if(second == null) {
+                if (second == null) {
                     return new Tuple3<Integer, String, String>(first.f0, first.f1, "-");
                 }
-                return new Tuple3<Integer, String, String>(first.f0, first.f1,second.f1);
+                return new Tuple3<Integer, String, String>(first.f0, first.f1, second.f1);
             }
         }).print();
         data1.rightOuterJoin(data2).where(0).equalTo(0).with(new JoinFunction<Tuple2<Integer, String>, Tuple2<Integer, String>, Tuple3<Integer, String, String>>() {
             @Override
             public Tuple3<Integer, String, String> join(Tuple2<Integer, String> first, Tuple2<Integer, String> second) throws Exception {
-                if(first == null) {
+                if (first == null) {
+                    return new Tuple3<Integer, String, String>(second.f0, "-", second.f1);
+                }
+                return new Tuple3<Integer, String, String>(first.f0, first.f1, second.f1);
+            }
+        }).print();
+        data1.fullOuterJoin(data2).where(0).equalTo(0).with(new JoinFunction<Tuple2<Integer, String>, Tuple2<Integer, String>, Tuple3<Integer, String, String>>() {
+            @Override
+            public Tuple3<Integer, String, String> join(Tuple2<Integer, String> first, Tuple2<Integer, String> second) throws Exception {
+                if (first == null) {
+                    return new Tuple3<Integer, String, String>(second.f0, "-", second.f1);
+                } else if (second == null) {
                     return new Tuple3<Integer, String, String>(first.f0, first.f1, "-");
                 }
-                return new Tuple3<Integer, String, String>(first.f0, first.f1,second.f1);
+                return new Tuple3<Integer, String, String>(first.f0, first.f1, second.f1);
             }
         }).print();
     }
@@ -76,7 +101,7 @@ public class JavaDataSetTransformationApp {
         data1.join(data2).where(0).equalTo(0).with(new JoinFunction<Tuple2<Integer, String>, Tuple2<Integer, String>, Tuple3<Integer, String, String>>() {
             @Override
             public Tuple3<Integer, String, String> join(Tuple2<Integer, String> first, Tuple2<Integer, String> second) throws Exception {
-                return new Tuple3<Integer, String, String>(first.f0, first.f1,second.f1);
+                return new Tuple3<Integer, String, String>(first.f0, first.f1, second.f1);
             }
         }).print();
     }
@@ -91,7 +116,7 @@ public class JavaDataSetTransformationApp {
             @Override
             public void flatMap(String input, Collector<String> out) throws Exception {
                 String[] splits = input.split(",");
-                for(String split: splits) {
+                for (String split : splits) {
                     //发送出去
                     out.collect(split);
                 }
@@ -109,7 +134,7 @@ public class JavaDataSetTransformationApp {
             @Override
             public void flatMap(String input, Collector<String> out) throws Exception {
                 String[] splits = input.split(",");
-                for(String split: splits) {
+                for (String split : splits) {
                     //发送出去
                     out.collect(split);
                 }
@@ -117,7 +142,7 @@ public class JavaDataSetTransformationApp {
         }).map(new MapFunction<String, Tuple2<String, Integer>>() {
             @Override
             public Tuple2<String, Integer> map(String value) throws Exception {
-                return new Tuple2<>(value,1);
+                return new Tuple2<>(value, 1);
             }
         }).groupBy(0).sum(1).print();
     }
