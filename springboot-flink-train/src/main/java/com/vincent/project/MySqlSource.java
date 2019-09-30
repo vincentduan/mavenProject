@@ -24,6 +24,7 @@ public class MySqlSource extends RichParallelSourceFunction<HashMap<String, Stri
         System.out.println("open");
     }
 
+
     @Override
     public void close() throws Exception {
         if (ps != null) {
@@ -32,7 +33,6 @@ public class MySqlSource extends RichParallelSourceFunction<HashMap<String, Stri
         if (connection != null) {
             connection.close();
         }
-
 
     }
 
@@ -67,6 +67,7 @@ public class MySqlSource extends RichParallelSourceFunction<HashMap<String, Stri
         }
         sourceContext.collect(map);
     }
+
 
     @Override
     public void cancel() {

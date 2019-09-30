@@ -79,12 +79,13 @@ public class LogAnalysis {
             // 对于level非E的，不作为我们业务指标的统计范畴
             // 数据清洗：就是按照我们的业务规则把原始输入的数据，进行一定业务规则的处理，使得满足我们的也无需求为准
             return stringLongStringStringTuple4.f1 != 0;
-        }).filter((FilterFunction<Tuple4<String, Long, String, String>>) stringLongStringStringTuple4 -> stringLongStringStringTuple4.f0.equals("E")).map(new MapFunction<Tuple4<String, Long, String, String>, Tuple3<Long, String, String>>() {
-            @Override
-            public Tuple3<Long, String, String> map(Tuple4<String, Long, String, String> stringLongStringStringTuple4) throws Exception {
-                return new Tuple3<>(stringLongStringStringTuple4.f1, stringLongStringStringTuple4.f2, stringLongStringStringTuple4.f3);
-            }
-        });
+        }).filter((FilterFunction<Tuple4<String, Long, String, String>>) (Tuple4<String, Long, String, String> stringLongStringStringTuple4) -> stringLongStringStringTuple4.f0.equals("E"))
+                .map(new MapFunction<Tuple4<String, Long, String, String>, Tuple3<Long, String, String>>() {
+                    @Override
+                    public Tuple3<Long, String, String> map(Tuple4<String, Long, String, String> stringLongStringStringTuple4) throws Exception {
+                        return new Tuple3<>(stringLongStringStringTuple4.f1, stringLongStringStringTuple4.f2, stringLongStringStringTuple4.f3);
+                    }
+                });
 
         SingleOutputStreamOperator<Tuple3<String, String, String>> apply = logData.assignTimestampsAndWatermarks(new AssignerWithPeriodicWatermarks<Tuple3<Long, String, String>>() {
 
@@ -160,7 +161,7 @@ public class LogAnalysis {
                 requestIndexer.add(indexRequest);
             }
         });
-        esSinkBuilder.setFailureHandler(new ActionRequestFailureHandler(){
+        esSinkBuilder.setFailureHandler(new ActionRequestFailureHandler() {
             @Override
             public void onFailure(ActionRequest actionRequest, Throwable throwable, int i, RequestIndexer requestIndexer) throws Throwable {
                 System.out.println("failure");
