@@ -68,11 +68,11 @@
             <version>${flink.version}</version>
         </dependency>
 
-        <!-- redis 2.8.5 connector-->
+        <!-- redis 5.0.5 connector-->
         <dependency>
-            <groupId>org.apache.bahir</groupId>
-            <artifactId>flink-connector-redis_2.11</artifactId>
-            <version>1.1-SNAPSHOT</version>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>LATEST</version>
         </dependency>
 
         <!-- Hadoop -->
@@ -101,16 +101,6 @@
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
             <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>1.2.3</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
