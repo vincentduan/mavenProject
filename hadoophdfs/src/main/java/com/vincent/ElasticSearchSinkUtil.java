@@ -10,6 +10,7 @@ import org.apache.http.HttpHost;
 import org.elasticsearch.ElasticsearchException;
 import org.elasticsearch.ElasticsearchParseException;
 import org.elasticsearch.action.ActionRequest;
+import org.elasticsearch.client.Client;
 import org.elasticsearch.common.util.concurrent.EsRejectedExecutionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

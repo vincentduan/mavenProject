@@ -33,8 +33,7 @@
     </repositories>
 
     <dependencies>
-        <!-- Apache Flink dependencies -->
-        <!-- These dependencies are provided, because they should not be packaged into the JAR file. -->
+
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-java</artifactId>
@@ -53,6 +52,7 @@
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-streaming-scala_2.11</artifactId>
             <version>${flink.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Elasticsearch 6.x connector -->
@@ -61,6 +61,19 @@
             <artifactId>flink-connector-elasticsearch6_2.11</artifactId>
             <version>${flink.version}</version>
         </dependency>
+
+<!--        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+            <version>6.2.3</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>25.1-jre</version>
+        </dependency>
+
         <!-- Kafka >1.0 connector-->
         <dependency>
             <groupId>org.apache.flink</groupId>
@@ -83,7 +96,7 @@
         </dependency>
 
 
-
+        <!-- 其他相关依赖 -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>

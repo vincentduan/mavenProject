@@ -48,6 +48,7 @@ public class Test {
         ElasticSearchSinkUtil.addSink(esAddresses, bulk_size, sinkParallelism, map, new ElasticsearchSinkFunction<Tuple7<String, String, String, String, String, String, String>>() {
             @Override
             public void process(Tuple7<String, String, String, String, String, String, String> data, RuntimeContext runtimeContext, RequestIndexer requestIndexer) {
+
                 IndexRequest indexRequest = null;
                 try {
                     indexRequest = createIndexRequest(data);
@@ -56,6 +57,8 @@ public class Test {
                 }
                 requestIndexer.add(indexRequest);
             }
+
+
 
             public IndexRequest createIndexRequest(Tuple7<String, String, String, String, String, String, String> data) throws IOException {
                 JSONObject jsonObject = new JSONObject();
@@ -67,7 +70,7 @@ public class Test {
                 jsonObject.put("desc_type", data.f5);
                 jsonObject.put("date", data.f6);
                 return Requests.indexRequest()
-                        .index("internet_user_daily_hk-20190701-20190731")
+                        .index("internet_user_daily_hk-20190701-20190731-2")
                         .type("type").source(jsonObject.toString(), XContentType.JSON);
             }
         });
