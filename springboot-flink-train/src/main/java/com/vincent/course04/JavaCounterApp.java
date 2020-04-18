@@ -19,14 +19,16 @@ public class JavaCounterApp {
             @Override
             public void open(Configuration parameters) throws Exception {
                 getRuntimeContext().addAccumulator("ele-counts-java",counter);
+                System.out.println("open counter: "+counter.getLocalValue());
             }
 
             @Override
             public String map(String value) throws Exception {
                 counter.add(1);
+                System.out.println("map counter: "+counter.getLocalValue());
                 return value;
             }
-        });
+        }).setParallelism(2);
         dataSet.writeAsText("E:/test4", FileSystem.WriteMode.OVERWRITE).setParallelism(3);
         JobExecutionResult javaCounterApp = executionEnvironment.execute("JavaCounterApp");
         long num = javaCounterApp.getAccumulatorResult("ele-counts-java");
