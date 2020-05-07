@@ -96,7 +96,7 @@ public class Utils {
     }
 
     public static String date2String(Date date) {
-        return fastDateFormat.format(date);
+        return simpleDateFormat.format(date);
     }
 
     public static void main(String[] args) {
