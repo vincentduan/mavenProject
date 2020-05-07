@@ -54,15 +54,26 @@ public class Utils {
         }
     }
 
+    /**
+     * 从data文件中随机获取身份证号
+     * @return
+     */
     public static String getRandomIdcard(){
-
         return idcard_list.get(faker.number().numberBetween(0, idcard_list.size()));
     }
 
+    /**
+     * 从data文件中随机获取手机号
+     * @return
+     */
     public static String getRandomTelephone() {
         return telephone_list.get(faker.number().numberBetween(0, telephone_list.size()));
     }
 
+    /**
+     * 随机生成时间 格式：1984-04-16T03:35:38
+     * @return
+     */
     public static String getRandomTime() {
         String time = simpleDateFormat.format(faker.date().birthday());
         return time;
@@ -92,6 +103,7 @@ public class Utils {
 
         String time = simpleDateFormat.format(new Date());
         System.out.println(time);
+        System.out.println(getRandomTime());
     }
 
 
