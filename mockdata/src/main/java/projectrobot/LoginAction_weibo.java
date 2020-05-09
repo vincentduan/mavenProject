@@ -8,6 +8,8 @@ public class LoginAction_weibo extends LoginAction {
     private Weibo_id about;
     @JSONField(name="by")
     private PhoneNumber by;
+    @JSONField(name="dgraph.type")
+    private String type = "LoginAction_weibo";
 
     public LoginAction_weibo() {
 

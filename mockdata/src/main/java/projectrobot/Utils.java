@@ -18,6 +18,7 @@ public class Utils {
 
     static Faker faker = new Faker();
 
+
     static List<String> idcard_list = new ArrayList<>();
     static List<String> telephone_list = new ArrayList<>();
 
@@ -27,8 +28,10 @@ public class Utils {
     static String[] action_type = new String[]{"评论", "回复"};
 
     static {
-        File idcard_file = new File("data/idcard.txt");
-        File telephone_file = new File("data/telephone.txt");
+        // String utilData_path = "data/";
+        String utilData_path = "/home/iie4bu/data/utils/";
+        File idcard_file = new File(utilData_path + "idcard.txt");
+        File telephone_file = new File(utilData_path + "telephone.txt");
         LineIterator it = null;
         try {
             it = FileUtils.lineIterator(idcard_file, "UTF-8");
@@ -86,9 +89,14 @@ public class Utils {
         return date2String(calendar.getTime());
     }
 
+    /**
+     * 将字符串类型时间，转成格式：1984-04-16T03:35:38
+     * @param time
+     * @return
+     */
     public static Date string2Date(String time) {
         try {
-            return fastDateFormat.parse(time);
+            return simpleDateFormat.parse(time);
         } catch (ParseException e) {
             e.printStackTrace();
         }

@@ -16,6 +16,8 @@ public class Call {
     private PhoneNumber from;
     @JSONField(name="to")
     private PhoneNumber to;
+    @JSONField(name="dgraph.type")
+    private String type = "Call";
 
     public String getStart_time() {
         return start_time;
@@ -69,7 +71,7 @@ public class Call {
         PhoneNumber to = PhoneNumber.generatePhoneNumber();
         Call call = new Call();
         call.setStart_time(Utils.date2String(startTime));
-        call.setEnd_time(endTime);
+        call.setEnd_time(Utils.date2String(Utils.string2Date(endTime)));
         call.setFrom(from);
         call.setTo(to);
         return call;
