@@ -82,8 +82,12 @@ public class Person {
         return uid;
     }
 
+    public String getCSVFormat() {
+        return idcard + "\t" + active_city+ "\t" + name + "\t" + age + "\t" + lang + "\n";
+    }
+
     public void setUid(String uid) {
-        this.uid = uid;
+        this.uid = "_:" + idcard;
     }
 
     public String getIdcard() {

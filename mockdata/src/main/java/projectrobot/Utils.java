@@ -28,8 +28,8 @@ public class Utils {
     static String[] action_type = new String[]{"评论", "回复"};
 
     static {
-        // String utilData_path = "data/";
-        String utilData_path = "/home/iie4bu/data/utils/";
+        String utilData_path = "data/";
+        //String utilData_path = "/home/iie4bu/data/utils/";
         File idcard_file = new File(utilData_path + "idcard.txt");
         File telephone_file = new File(utilData_path + "telephone.txt");
         LineIterator it = null;

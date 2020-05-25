@@ -9,10 +9,18 @@ public class LoginAction_weibo extends LoginAction {
     @JSONField(name="by")
     private PhoneNumber by;
     @JSONField(name="dgraph.type")
-    private String type = "LoginAction_weibo";
+    private String type;
 
     public LoginAction_weibo() {
+        this.type = "LoginAction_weibo";
+    }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public Weibo_id getAbout() {

@@ -12,9 +12,7 @@ import java.util.stream.Stream;
 
 public class GenerateData {
     public static void main(String[] args) throws IOException {
-
-
-        // args[0] = E:/test/
+        args[0] = "E:/test/";
         String outputPath = args[0];
         int date_count = Integer.parseInt(args[1]);
         // person

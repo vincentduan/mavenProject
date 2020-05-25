@@ -19,6 +19,14 @@ public class Call {
     @JSONField(name="dgraph.type")
     private String type = "Call";
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public String getStart_time() {
         return start_time;
     }
@@ -59,6 +67,7 @@ public class Call {
     }
 
     public Call() {
+        this.type = "Call";
     }
 
 
