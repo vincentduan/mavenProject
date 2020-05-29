@@ -9,6 +9,8 @@ import java.nio.channels.FileChannel;
 
 public class ReadWriteNio {
 
+    public static int bufSize = 100;
+
     public static void main(String args[]) throws Exception {
         int bufSize = 100;
         File fin = new File("E:\\jiahui\\2014-09-01.dat");
@@ -55,8 +57,8 @@ public class ReadWriteNio {
                     String line = tempString.substring(fromIndex, endIndex);
                     line = new String(strBuf.toString() + line + "\n");
                     System.out.println(size + ": " + line);
-//System.out.print("</over/>");
-//write to anthone file
+
+                    //write to anthone file
                     writeFileByLine(fcout, wBuffer, line);
 
                     strBuf.delete(0, strBuf.length());
@@ -69,21 +71,21 @@ public class ReadWriteNio {
                 }
             }
         } catch (IOException e) {
-// TODO Auto-generated catch block
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
 
     /*写文件*/
-    public static void writeFileByLine(FileChannel fcout, ByteBuffer wBuffer, String line) {
+    public static void writeFileByLine(FileChannel fcout, String line) {
         try {
-//write on file head
-//fcout.write(wBuffer.wrap(line.getBytes()));
-//wirte append file on foot
-            fcout.write(wBuffer.wrap(line.getBytes()), fcout.size());
-
+            //write on file head
+            //fcout.write(wBuffer.wrap(line.getBytes()));
+            //wirte append file on foot
+            //fcout.write(wBuffer.wrap(line.getBytes()), fcout.size());
+            fcout.write(ByteBuffer.allocate(bufSize).wrap(line.getBytes()), fcout.size());
         } catch (IOException e) {
-// TODO Auto-generated catch block
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
